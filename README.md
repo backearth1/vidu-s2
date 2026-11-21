@@ -98,7 +98,7 @@ JSON **字符串** —— 文档强调它不是对象），也可以点「AI 生
 
 | 项 | 说明 |
 |-|-|
-| `bin/mediamtx` | RTMP 接收 + HLS 输出，v1.9.3，随 `server.js` 自动拉起 |
+| `bin/mediamtx` | RTMP 接收 + HLS 输出，v1.9.3，随 `server.js` 自动拉起。二进制不入仓库，[下载 v1.9.3](https://github.com/bluenviron/mediamtx/releases/tag/v1.9.3) 后放到 `bin/mediamtx`（Linux amd64 单文件，`chmod +x`）；`bin/mediamtx.yml` 已带配置 |
 | `public/vendor/hls.min.js` | hls.js 1.5.15，本地托管 |
 | 公网放行 TCP **19350** | Vidu 要从公网连进来推流。云厂商安全组需放行 |
 | `--public-host` | 转推地址里的公网 IP / 域名，不给则取你访问页面用的主机名 |
