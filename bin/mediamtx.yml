@@ -1,0 +1,18 @@
+# 只负责接收 Vidu 的 RTMP 转推。观看用的低码率 HLS 和录像都由 server.js 通过 ffmpeg 从这里拉流处理。
+logLevel: info
+api: no
+metrics: no
+pprof: no
+playback: no
+srt: no
+rtsp: no
+webrtc: no
+
+rtmp: yes
+rtmpAddress: :19350
+
+hls: no
+
+paths:
+  # 只允许 live/<随机串> 这种路径推流；随机串由 server.js 创建直播时生成，等于推流口令
+  "~^live/[A-Za-z0-9]{16,}$":

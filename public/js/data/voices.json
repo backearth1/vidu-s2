@@ -1,0 +1,4324 @@
+[
+ {
+  "group": "Avatar 实时版（provider=qwen_omni）",
+  "voices": [
+   {
+    "name": "甜甜 Tina",
+    "id": "Tina",
+    "desc": "奶茶小姐姐，甜甜的、暖暖的",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "林欣宜 Cindy",
+    "id": "Cindy",
+    "desc": "台湾说话嗲嗲的小姐姐",
+    "lang": "中文（台湾口音）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "清欢 Liora Mira",
+    "id": "Liora Mira",
+    "desc": "用声音织就烟火人间的温柔",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "知芝 Sunnybobi",
+    "id": "Sunnybobi",
+    "desc": "大大咧咧的社恐邻家姑娘",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "林川野 Raymond",
+    "id": "Raymond",
+    "desc": "声音清亮，爱吃外/卖的宅男",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "晨煦 Ethan",
+    "id": "Ethan",
+    "desc": "标准普通话，带部分北方口音。阳光 温暖 活力 朝气",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "予安 Theo Calm",
+    "id": "Theo Calm",
+    "desc": "在静默处传递理解，在言语间疗愈人心。",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "苏瑶 Serena",
+    "id": "Serena",
+    "desc": "温柔小姐姐",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "厚 Harvey",
+    "id": "Harvey",
+    "desc": "我的声音来自岁月沉淀——低沉、温和，带着一点咖啡与旧书的气息。",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "四月 Maia",
+    "id": "Maia",
+    "desc": "知性与温柔的碰撞",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "江晨 Evan",
+    "id": "Evan",
+    "desc": "男大学生，年下奶狗",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "小乔妹 Qiao",
+    "id": "Qiao",
+    "desc": "超关键！她不是普通可爱，而是'表面甜妹，个性十足'",
+    "lang": "中文（台湾口音）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "茉兔 Momo",
+    "id": "Momo",
+    "desc": "撒娇搞怪，逗你开心",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "伟伦 Wil",
+    "id": "Wil",
+    "desc": "在深圳长大的港台腔小哥哥",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "安琪 Angel",
+    "id": "Angel",
+    "desc": "略带台式口音，她超甜的哦！",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "李公公 Li Cassian",
+    "id": "Li Cassian",
+    "desc": "话中三分留白、七分察言观色",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "舒然 Mia",
+    "id": "Mia",
+    "desc": "以细腻声音，传递慢生活美学与日常治愈力量的生活艺术家",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿逗 Joyner",
+    "id": "Joyner",
+    "desc": "搞笑、夸张、接地气",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "金爷 Gold",
+    "id": "Gold",
+    "desc": "西海岸黑人 Rapper",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "卡捷琳娜 Katerina",
+    "id": "Katerina",
+    "desc": "御姐音色，韵律回味十足",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "甜茶 Ryan",
+    "id": "Ryan",
+    "desc": "节奏拉满，戏感炸裂，真实与张力共舞",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "詹妮弗 Jennifer",
+    "id": "Jennifer",
+    "desc": "品牌级、电影质感般美语女声",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "艾登 Aiden",
+    "id": "Aiden",
+    "desc": "精通厨艺的美语大男孩",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "敏儿 Mione",
+    "id": "Mione",
+    "desc": "成熟，知性英国邻家妹妹",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "晴儿 Sunny",
+    "id": "Sunny",
+    "desc": "甜到你心里的川妹子",
+    "lang": "中文（四川话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "晓东 Dylan",
+    "id": "Dylan",
+    "desc": "北京胡同里长大的少年",
+    "lang": "中文（北京话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "程川 Eric",
+    "id": "Eric",
+    "desc": "一个跳脱市井的四川成都男子",
+    "lang": "中文（四川话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "李彼得 Peter",
+    "id": "Peter",
+    "desc": "天津相声，专业捧哏",
+    "lang": "中文（天津话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿樸伯 Joseph Chen",
+    "id": "Joseph Chen",
+    "desc": "我是阿樸伯，本名陳志樸，南洋老華僑。",
+    "lang": "中文（闽南话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "秦川 Marcus",
+    "id": "Marcus",
+    "desc": "面宽话短，心实声沉——老陕的味道。",
+    "lang": "中文（陕西话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "老李 Li",
+    "id": "Li",
+    "desc": "骂骂咧咧的伯伯",
+    "lang": "中文（南京话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿清",
+    "id": "Kiki",
+    "desc": "甜美的港妹闺蜜",
+    "lang": "中文（粤语）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿强 Rocky",
+    "id": "Rocky",
+    "desc": "幽默风趣的阿强，在线陪聊",
+    "lang": "中文（广东话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "素熙 Sohee",
+    "id": "Sohee",
+    "desc": "温柔开朗，情绪丰富的韩国欧尼",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "莱恩 Lenn",
+    "id": "Lenn",
+    "desc": "理性是底色，叛逆藏在细节里——穿西装也听后朋克的德国青年。",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "小野杏 Ono Anna",
+    "id": "Ono Anna",
+    "desc": "鬼灵精怪的青梅竹马",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "索尼莎 Sonrisa",
+    "id": "Sonrisa",
+    "desc": "热情开朗的拉美大姐",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "博德加 Bodega",
+    "id": "Bodega",
+    "desc": "热情的西班牙大叔",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "埃米尔安 Emilien",
+    "id": "Emilien",
+    "desc": "浪漫的法国大哥哥",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "安德雷 Andre",
+    "id": "Andre",
+    "desc": "声音磁性，自然舒服、沉稳男生",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "拉迪奥·戈尔 Radio Gol",
+    "id": "Radio Gol",
+    "desc": "足球诗人 Rádio Gol！今天我要用名字为你们解说足球。",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿列克 Alek",
+    "id": "Alek",
+    "desc": "一开口，是战斗民族的冷，也是毛呢大衣下的暖",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿力 Rizky",
+    "id": "Rizky",
+    "desc": "印尼的青年小伙，声线个性",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "萝雅 Roya",
+    "id": "Roya",
+    "desc": "热爱运动的女孩，拥有一颗自由的心。",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿尔达 Arda",
+    "id": "Arda",
+    "desc": "不高亢，也不低沉，干净利落中带着温润的气质",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "阿幸 Hana",
+    "id": "Hana",
+    "desc": "爱狗狗的越南成熟姐姐",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "多尔切 Dolce",
+    "id": "Dolce",
+    "desc": "慵懒的意大利大叔",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "雅克 Jakub",
+    "id": "Jakub",
+    "desc": "波兰小镇文艺青年，声线磁性性感",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "海娜 Griet",
+    "id": "Griet",
+    "desc": "荷兰成熟又文艺的女性",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "艾莉卡 Eliška",
+    "id": "Eliška",
+    "desc": "每个单词都传递中欧的匠心与温度",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "玛丽娜 Marina",
+    "id": "Marina",
+    "desc": "一个在多元文化城市中长大的女孩。",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "西芮 Siiri",
+    "id": "Siiri",
+    "desc": "内敛温柔，语速舒缓如湖面微澜",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "林恩 Ingrid",
+    "id": "Ingrid",
+    "desc": "挪威乡村姑娘",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "海娜 Sigga",
+    "id": "Sigga",
+    "desc": "冰岛小镇的知性女青年",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "雅娜 Bea",
+    "id": "Bea",
+    "desc": "爱喝咖啡的菲律宾甜甜小姐姐",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   },
+   {
+    "name": "思怡 Chloe",
+    "id": "Chloe",
+    "desc": "马来西亚白领女生",
+    "lang": "中文（普通话）、英语、法语、德语、俄语、意大利语、西班牙语、葡萄牙语、日语、韩语、泰语、印度尼西亚语、阿拉伯语、越南语、土耳其语、芬兰语、波兰语、印地语、荷兰语、捷克语、乌尔都语、他加禄语、瑞典语、丹麦语、希伯来语、冰岛语、马来语、挪威语、波斯语。"
+   }
+  ]
+ },
+ {
+  "group": "Avatar 实时版（provider=doubao，国内环境）",
+  "voices": [
+   {
+    "name": "Vivi 2.0",
+    "id": "zh_female_vv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "语种：中文、日文、印尼、墨西哥西班牙语"
+   },
+   {
+    "name": "小何 2.0",
+    "id": "zh_female_xiaohe_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "语种：中文"
+   },
+   {
+    "name": "云舟 2.0",
+    "id": "zh_male_m191_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "语种：中文"
+   },
+   {
+    "name": "小天 2.0",
+    "id": "zh_male_taocheng_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "语种：中文"
+   },
+   {
+    "name": "刘飞 2.0",
+    "id": "zh_male_liufei_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "魅力苏菲 2.0",
+    "id": "zh_female_sophie_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清新女声 2.0",
+    "id": "zh_female_qingxinnvsheng_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "知性灿灿 2.0",
+    "id": "zh_female_cancan_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "撒娇学妹 2.0",
+    "id": "zh_female_sajiaoxuemei_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美小源 2.0",
+    "id": "zh_female_tianmeixiaoyuan_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美桃子 2.0",
+    "id": "zh_female_tianmeitaozi_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "爽快思思 2.0",
+    "id": "zh_female_shuangkuaisisi_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "佩奇猪 2.0",
+    "id": "zh_female_peiqi_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "邻家女孩 2.0",
+    "id": "zh_female_linjianvhai_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "少年梓辛 2.0",
+    "id": "zh_male_shaonianzixin_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "猴哥 2.0",
+    "id": "zh_male_sunwukong_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "Tina老师 2.0",
+    "id": "zh_female_yingyujiaoxue_uranus_bigtts",
+    "desc": "教育场景",
+    "lang": "中文、英式英语"
+   },
+   {
+    "name": "暖阳女声 2.0",
+    "id": "zh_female_kefunvsheng_uranus_bigtts",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "儿童绘本 2.0",
+    "id": "zh_female_xiaoxue_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "大壹 2.0",
+    "id": "zh_male_dayi_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "黑猫侦探社咪仔 2.0",
+    "id": "zh_female_mizai_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "鸡汤女 2.0",
+    "id": "zh_female_jitangnv_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "魅力女友 2.0",
+    "id": "zh_female_meilinvyou_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "流畅女声 2.0",
+    "id": "zh_female_liuchangnv_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "儒雅逸辰 2.0",
+    "id": "zh_male_ruyayichen_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "Tim",
+    "id": "en_male_tim_uranus_bigtts",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Dacey",
+    "id": "en_female_dacey_uranus_bigtts",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Stokie",
+    "id": "en_female_stokie_uranus_bigtts",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "温柔妈妈 2.0",
+    "id": "zh_female_wenroumama_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "解说小明 2.0",
+    "id": "zh_male_jieshuoxiaoming_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "TVB女声 2.0",
+    "id": "zh_female_tvbnv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "译制片男 2.0",
+    "id": "zh_male_yizhipiannan_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "俏皮女声 2.0",
+    "id": "zh_female_qiaopinv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "直率英子 2.0",
+    "id": "zh_female_zhishuaiyingzi_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "邻家男孩 2.0",
+    "id": "zh_male_linjiananhai_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "四郎 2.0",
+    "id": "zh_male_silang_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "儒雅青年 2.0",
+    "id": "zh_male_ruyaqingnian_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "擎苍 2.0",
+    "id": "zh_male_qingcang_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "熊二 2.0",
+    "id": "zh_male_xionger_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "樱桃丸子 2.0",
+    "id": "zh_female_yingtaowanzi_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温暖阿虎 2.0",
+    "id": "zh_male_wennuanahu_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "奶气萌娃 2.0",
+    "id": "zh_male_naiqimengwa_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "婆婆 2.0",
+    "id": "zh_female_popo_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "高冷御姐 2.0",
+    "id": "zh_female_gaolengyujie_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "傲娇霸总 2.0",
+    "id": "zh_male_aojiaobazong_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "懒音绵宝 2.0",
+    "id": "zh_male_lanyinmianbao_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "反卷青年 2.0",
+    "id": "zh_male_fanjuanqingnian_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔淑女 2.0",
+    "id": "zh_female_wenroushunv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "古风少御 2.0",
+    "id": "zh_female_gufengshaoyu_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "活力小哥 2.0",
+    "id": "zh_male_huolixiaoge_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "霸气青叔 2.0",
+    "id": "zh_male_baqiqingshu_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "悬疑解说 2.0",
+    "id": "zh_male_xuanyijieshuo_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "萌丫头 2.0",
+    "id": "zh_female_mengyatou_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "贴心女声 2.0",
+    "id": "zh_female_tiexinnvsheng_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "鸡汤妹妹 2.0",
+    "id": "zh_female_jitangmei_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "磁性解说男声 2.0",
+    "id": "zh_male_cixingjieshuonan_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "亮嗓萌仔 2.0",
+    "id": "zh_male_liangsangmengzai_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "开朗姐姐 2.0",
+    "id": "zh_female_kailangjiejie_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "高冷沉稳 2.0",
+    "id": "zh_male_gaolengchenwen_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "深夜播客 2.0",
+    "id": "zh_male_shenyeboke_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "鲁班七号 2.0",
+    "id": "zh_male_lubanqihao_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "娇喘女声 2.0",
+    "id": "zh_female_jiaochuannv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "林潇 2.0",
+    "id": "zh_female_linxiao_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "玲玲姐姐 2.0",
+    "id": "zh_female_lingling_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "春日部姐姐 2.0",
+    "id": "zh_female_chunribu_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "唐僧 2.0",
+    "id": "zh_male_tangseng_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "庄周 2.0",
+    "id": "zh_male_zhuangzhou_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "开朗弟弟 2.0",
+    "id": "zh_male_kailangdidi_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "猪八戒 2.0",
+    "id": "zh_male_zhubajie_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "感冒电音姐姐 2.0",
+    "id": "zh_female_ganmaodianyin_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "谄媚女声 2.0",
+    "id": "zh_female_chanmeinv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "女雷神 2.0",
+    "id": "zh_female_nvleishen_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "亲切女声 2.0",
+    "id": "zh_female_qinqienv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "快乐小东 2.0",
+    "id": "zh_male_kuailexiaodong_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "开朗学长 2.0",
+    "id": "zh_male_kailangxuezhang_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "悠悠君子 2.0",
+    "id": "zh_male_youyoujunzi_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "文静毛毛 2.0",
+    "id": "zh_female_wenjingmaomao_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "知性女声 2.0",
+    "id": "zh_female_zhixingnv_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清爽男大 2.0",
+    "id": "zh_male_qingshuangnanda_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "渊博小叔 2.0",
+    "id": "zh_male_yuanboxiaoshu_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "阳光青年 2.0",
+    "id": "zh_male_yangguangqingnian_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清澈梓梓 2.0",
+    "id": "zh_female_qingchezizi_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美悦悦 2.0",
+    "id": "zh_female_tianmeiyueyue_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "心灵鸡汤 2.0",
+    "id": "zh_female_xinlingjitang_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔小哥 2.0",
+    "id": "zh_male_wenrouxiaoge_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "柔美女友 2.0",
+    "id": "zh_female_roumeinvyou_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "东方浩然 2.0",
+    "id": "zh_male_dongfanghaoran_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔小雅 2.0",
+    "id": "zh_female_wenrouxiaoya_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "天才童声 2.0",
+    "id": "zh_male_tiancaitongsheng_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "武则天 2.0",
+    "id": "zh_female_wuzetian_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "顾姐 2.0",
+    "id": "zh_female_gujie_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "广告解说 2.0",
+    "id": "zh_male_guanggaojieshuo_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "少儿故事 2.0",
+    "id": "zh_female_shaoergushi_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "Charlie 2.0",
+    "id": "ICL_uranus_en_female_charlie_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Ethan 2.0",
+    "id": "ICL_uranus_en_male_ethan_tob",
+    "desc": "外语音色",
+    "lang": "澳洲英语"
+   },
+   {
+    "name": "Alastor 2.0",
+    "id": "ICL_uranus_en_male_alastor_tob",
+    "desc": "外语音色",
+    "lang": "英式英语"
+   },
+   {
+    "name": "Chucky 2.0",
+    "id": "ICL_uranus_en_male_chucky_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Noah 2.0",
+    "id": "ICL_uranus_en_male_noah_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jigsaw 2.0",
+    "id": "ICL_uranus_en_male_jigsaw_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Clown Man 2.0",
+    "id": "ICL_uranus_en_male_clown_man_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Cartoon Chef 2.0",
+    "id": "ICL_uranus_en_male_cartoon_chef_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Frosty Man 2.0",
+    "id": "ICL_uranus_en_male_frosty_man_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "The Grinch 2.0",
+    "id": "ICL_uranus_en_male_the_grinch_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Kevin McCallister 2.0",
+    "id": "ICL_uranus_en_male_kevin_mccallister_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Michael 2.0",
+    "id": "ICL_uranus_en_male_michael_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Big Boogie 2.0",
+    "id": "ICL_uranus_en_male_big_boogie_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Xavier 2.0",
+    "id": "ICL_uranus_en_male_xavier_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Zayne 2.0",
+    "id": "ICL_uranus_en_male_zayne_tob",
+    "desc": "外语音色",
+    "lang": "美式英语"
+   },
+   {
+    "name": "客服婉君 2.0",
+    "id": "ICL_uranus_zh_female_kefuwanjun_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "营销小楠 2.0",
+    "id": "ICL_uranus_zh_female_yingxiaokefu_v2_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "傲娇女友 2.0",
+    "id": "ICL_uranus_zh_female_aojiaonvyou_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "傲慢娇声 2.0",
+    "id": "ICL_uranus_zh_female_aomanjiaosheng_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "邪魅女王 2.0",
+    "id": "ICL_uranus_zh_female_xiemeinvwang_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇姐姐 2.0",
+    "id": "ICL_uranus_zh_female_bingjiaojiejie_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇萌妹 2.0",
+    "id": "ICL_uranus_zh_female_bingjiaomengmei_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病弱少女 2.0",
+    "id": "ICL_uranus_zh_female_bingruoshaonv_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "成熟温柔 2.0",
+    "id": "ICL_uranus_zh_female_chengshuwenrou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "成熟姐姐 2.0",
+    "id": "ICL_uranus_zh_female_chengshujiejie_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "纯真少女 2.0",
+    "id": "ICL_uranus_zh_female_chunzhenshaonv_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "纯澈女生 2.0",
+    "id": "ICL_uranus_zh_female_chunchenvsheng_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "妩媚可人 2.0",
+    "id": "ICL_uranus_zh_female_wumeikeren_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "乖巧可儿 2.0",
+    "id": "ICL_uranus_zh_female_guaiqiaokeer_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "和蔼奶奶 2.0",
+    "id": "ICL_uranus_zh_female_heainainai_tob",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "活泼刁蛮 2.0",
+    "id": "ICL_uranus_zh_female_huopodiaoman_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "活泼女孩 2.0",
+    "id": "ICL_uranus_zh_female_huoponvhai_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "娇憨女王 2.0",
+    "id": "ICL_uranus_zh_female_jiaohannvwang_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "娇弱萝莉 2.0",
+    "id": "ICL_uranus_zh_female_jiaoruoluoli_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "假小子 2.0",
+    "id": "ICL_uranus_zh_female_jiaxiaozi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "精灵向导 2.0",
+    "id": "ICL_uranus_zh_female_jinglingxiangdao_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "开朗婷婷 2.0",
+    "id": "ICL_uranus_zh_female_kailangtingting_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "开心小鸿 2.0",
+    "id": "ICL_uranus_zh_female_kaixinxiaohong_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "可爱女生 2.0",
+    "id": "ICL_uranus_zh_female_keainvsheng_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "灵动欣欣 2.0",
+    "id": "ICL_uranus_zh_female_lingdongxinxin_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "邻居阿姨 2.0",
+    "id": "ICL_uranus_zh_female_linjuayi_tob",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美娇俏 2.0",
+    "id": "ICL_uranus_zh_female_tianmeijiaoqiao_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "清冷高雅 2.0",
+    "id": "ICL_uranus_zh_female_qinglenggaoya_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "理性圆子 2.0",
+    "id": "ICL_uranus_zh_female_lixingyuanzi_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "性感魅惑 2.0",
+    "id": "ICL_uranus_zh_female_xingganmeihuo_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "暖心茜茜 2.0",
+    "id": "ICL_uranus_zh_female_nuanxinqianqian_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "暖心学姐 2.0",
+    "id": "ICL_uranus_zh_female_nuanxinxuejie_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "清甜莓莓 2.0",
+    "id": "ICL_uranus_zh_female_qingtianmeimei_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清甜桃桃 2.0",
+    "id": "ICL_uranus_zh_female_qingtiantaotao_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清晰小雪 2.0",
+    "id": "ICL_uranus_zh_female_qingxixiaoxue_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "倾心少女 2.0",
+    "id": "ICL_uranus_zh_female_qingxinshaonv_tob",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "柔骨魂师 2.0",
+    "id": "ICL_uranus_zh_female_rouguhunshi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "软萌糖糖 2.0",
+    "id": "ICL_uranus_zh_female_ruanmengtangtang_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "软萌团子 2.0",
+    "id": "ICL_uranus_zh_female_ruanmengtuanzi_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美活泼 2.0",
+    "id": "ICL_uranus_zh_female_tianmeihuopo_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美小橘 2.0",
+    "id": "ICL_uranus_zh_female_tianmeixiaoju_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "甜美小雨 2.0",
+    "id": "ICL_uranus_zh_female_tianmeixiaoyu_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "调皮公主 2.0",
+    "id": "ICL_uranus_zh_female_tiaopigongzhu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "贴心女友 2.0",
+    "id": "ICL_uranus_zh_female_tiexinnvyou_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔女神 2.0",
+    "id": "ICL_uranus_zh_female_wenrounvshen_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔文雅 2.0",
+    "id": "ICL_uranus_zh_female_wenrouwenya_tob",
+    "desc": "通用场景,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "知心姐姐 2.0",
+    "id": "ICL_uranus_zh_female_zhixinjiejie_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "妩媚御姐 2.0",
+    "id": "ICL_uranus_zh_female_wumeiyujie_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "元气甜妹 2.0",
+    "id": "ICL_uranus_zh_female_yuanqitianmei_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "邪魅御姐 2.0",
+    "id": "ICL_uranus_zh_female_xiemeiyujie_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "性感御姐 2.0",
+    "id": "ICL_uranus_zh_female_xingganyujie_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "秀丽倩倩 2.0",
+    "id": "ICL_uranus_zh_female_xiuliqianqian_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "贴心闺蜜 2.0",
+    "id": "ICL_uranus_zh_female_tiexinguimi_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "贴心妹妹 2.0",
+    "id": "ICL_uranus_zh_female_tiexinmeimei_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔白月光 2.0",
+    "id": "ICL_uranus_zh_female_wenroubaiyueguang_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "初恋女友 2.0",
+    "id": "ICL_uranus_zh_female_chuliannvyou_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "知性温婉 2.0",
+    "id": "ICL_uranus_zh_female_zhixingwenwan_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "傲气凌人 2.0",
+    "id": "ICL_uranus_zh_male_aoqilingren_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "黯刃秦主 2.0",
+    "id": "ICL_uranus_zh_male_anrenqinzhu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "傲娇公子 2.0",
+    "id": "ICL_uranus_zh_male_aojiaogongzi_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "傲娇精英 2.0",
+    "id": "ICL_uranus_zh_male_aojiaojingying_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "傲慢青年 2.0",
+    "id": "ICL_uranus_zh_male_aomanqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "傲慢少爷 2.0",
+    "id": "ICL_uranus_zh_male_aomanshaoye_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "枕边低语 2.0",
+    "id": "ICL_uranus_zh_male_zhenbiandiyu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "霸道少爷 2.0",
+    "id": "ICL_uranus_zh_male_badaoshaoye_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "霸道总裁 2.0",
+    "id": "ICL_uranus_zh_male_badaozongcai_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇白莲 2.0",
+    "id": "ICL_uranus_zh_male_bingjiaobailian_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇弟弟 2.0",
+    "id": "ICL_uranus_zh_male_bingjiaodidi_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇哥哥 2.0",
+    "id": "ICL_uranus_zh_male_bingjiaogege_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇男友 2.0",
+    "id": "ICL_uranus_zh_male_bingjiaonanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病娇少年 2.0",
+    "id": "ICL_uranus_zh_male_bingjiaoshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病弱公子 2.0",
+    "id": "ICL_uranus_zh_male_bingruogongzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "病弱少年 2.0",
+    "id": "ICL_uranus_zh_male_bingruoshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "不羁青年 2.0",
+    "id": "ICL_uranus_zh_male_bujiqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "醇厚低音 2.0",
+    "id": "ICL_uranus_zh_male_chunhoudiyin_tob",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "咆哮小哥 2.0",
+    "id": "ICL_uranus_zh_male_paoxiaoxiaoge_tob",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "炀炀 2.0",
+    "id": "ICL_uranus_zh_male_yangyang_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "孱弱少爷 2.0",
+    "id": "ICL_uranus_zh_male_chanruoshaoye_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "成熟总裁 2.0",
+    "id": "ICL_uranus_zh_male_chengshuzongcai_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "沉稳明仔 2.0",
+    "id": "ICL_uranus_zh_male_chenwenmingzai_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清逸苏感 2.0",
+    "id": "ICL_uranus_zh_male_qingyisugan_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "纯真学弟 2.0",
+    "id": "ICL_uranus_zh_male_chunzhenxuedi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "磁性男嗓 2.0",
+    "id": "ICL_uranus_zh_male_cixingnansang_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "醋精男生 2.0",
+    "id": "ICL_uranus_zh_male_cujingnansheng_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "醋精男友 2.0",
+    "id": "ICL_uranus_zh_male_cujingnanyou_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "低音沉郁 2.0",
+    "id": "ICL_uranus_zh_male_diyinchenyu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "风发少年 2.0",
+    "id": "ICL_uranus_zh_male_fengfashaonian_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "儒雅公子 2.0",
+    "id": "ICL_uranus_zh_male_ruyagongzi_tob",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "腹黑公子 2.0",
+    "id": "ICL_uranus_zh_male_fuheigongzi_tob",
+    "desc": "角色扮演,S2S-SC",
+    "lang": "中文"
+   },
+   {
+    "name": "干净少年 2.0",
+    "id": "ICL_uranus_zh_male_ganjingshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "高冷总裁 2.0",
+    "id": "ICL_uranus_zh_male_gaolengzongcai_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "孤傲公子 2.0",
+    "id": "ICL_uranus_zh_male_guaogongzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "孤高公子 2.0",
+    "id": "ICL_uranus_zh_male_gugaogongzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "诡异神秘 2.0",
+    "id": "ICL_uranus_zh_male_guiyishenmi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "固执病娇 2.0",
+    "id": "ICL_uranus_zh_male_guzhibingjiao_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "憨厚敦实 2.0",
+    "id": "ICL_uranus_zh_male_hanhoudunshi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "活力青年 2.0",
+    "id": "ICL_uranus_zh_male_huoliqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "活泼男友 2.0",
+    "id": "ICL_uranus_zh_male_huoponanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "活泼爽朗 2.0",
+    "id": "ICL_uranus_zh_male_huoposhuanglang_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "胡子叔叔 2.0",
+    "id": "ICL_uranus_zh_male_huzishushu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "机甲智能 2.0",
+    "id": "ICL_uranus_zh_male_jijiazhineng_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "精英青年 2.0",
+    "id": "ICL_uranus_zh_male_jingyingqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "俊逸公子 2.0",
+    "id": "ICL_uranus_zh_male_junyigongzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "开朗轻快 2.0",
+    "id": "ICL_uranus_zh_male_kailangqingkuai_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "开朗青年 2.0",
+    "id": "ICL_uranus_zh_male_kailangqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "蓝银草魂师 2.0",
+    "id": "ICL_uranus_zh_male_lanyincaohunshi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷傲总裁 2.0",
+    "id": "ICL_uranus_zh_male_lengaozongcai_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷淡疏离 2.0",
+    "id": "ICL_uranus_zh_male_lengdanshuli_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷峻高智 2.0",
+    "id": "ICL_uranus_zh_male_lengjungaozhi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷峻上司 2.0",
+    "id": "ICL_uranus_zh_male_lengjunshangsi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷酷哥哥 2.0",
+    "id": "ICL_uranus_zh_male_lengkugege_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "冷脸兄长 2.0",
+    "id": "ICL_uranus_zh_male_lenglianxiongzhang_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷脸学霸 2.0",
+    "id": "ICL_uranus_zh_male_lenglianxueba_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷漠男友 2.0",
+    "id": "ICL_uranus_zh_male_lengmonanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "冷漠兄长 2.0",
+    "id": "ICL_uranus_zh_male_lengmoxiongzhang_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "凌云青年 2.0",
+    "id": "ICL_uranus_zh_male_lingyunqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "清冷矜贵 2.0",
+    "id": "ICL_uranus_zh_male_qinglengjingui_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "绿茶小哥 2.0",
+    "id": "ICL_uranus_zh_male_lvchaxiaoge_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "懵懂青年 2.0",
+    "id": "ICL_uranus_zh_male_mengdongqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "闷油瓶小哥 2.0",
+    "id": "ICL_uranus_zh_male_menyoupingxiaoge_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "嚣张小哥 2.0",
+    "id": "ICL_uranus_zh_male_xiaozhangxiaoge_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "粘人男友 2.0",
+    "id": "ICL_uranus_zh_male_nianrennanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "内敛才俊 2.0",
+    "id": "ICL_uranus_zh_male_neiliancaijun_tob",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "暖心体贴 2.0",
+    "id": "ICL_uranus_zh_male_nuanxintitie_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "翩翩公子 2.0",
+    "id": "ICL_uranus_zh_male_pianpiangongzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "沉稳优雅 2.0",
+    "id": "ICL_uranus_zh_male_chenwenyouya_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "青涩小生 2.0",
+    "id": "ICL_uranus_zh_male_qingsexiaosheng_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "青涩青年 2.0",
+    "id": "ICL_uranus_zh_male_qingseqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "清爽少年 2.0",
+    "id": "ICL_uranus_zh_male_qingshuangshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "清新波波 2.0",
+    "id": "ICL_uranus_zh_male_qingxinbobo_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "亲切青年 2.0",
+    "id": "ICL_uranus_zh_male_qinqieqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "亲切小卓 2.0",
+    "id": "ICL_uranus_zh_male_qinqiexiaozhuo_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "清朗温润 2.0",
+    "id": "ICL_uranus_zh_male_qinglangwenrun_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "热血少年 2.0",
+    "id": "ICL_uranus_zh_male_rexueshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "儒雅才俊 2.0",
+    "id": "ICL_uranus_zh_male_ruyacaijun_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "儒雅君子 2.0",
+    "id": "ICL_uranus_zh_male_ruyajunzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "儒雅总裁 2.0",
+    "id": "ICL_uranus_zh_male_ruyazongcai_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "撒娇男生 2.0",
+    "id": "ICL_uranus_zh_male_sajiaonansheng_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "撒娇男友 2.0",
+    "id": "ICL_uranus_zh_male_sajiaonanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "撒娇粘人 2.0",
+    "id": "ICL_uranus_zh_male_sajiaonianren_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "洒脱青年 2.0",
+    "id": "ICL_uranus_zh_male_satuoqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "少年将军 2.0",
+    "id": "ICL_uranus_zh_male_shaonianjiangjun_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "深沉总裁 2.0",
+    "id": "ICL_uranus_zh_male_shenchenzongcai_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "机灵小伙 2.0",
+    "id": "ICL_uranus_zh_male_jilingxiaohuo_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "神秘法师 2.0",
+    "id": "ICL_uranus_zh_male_shenmifashi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "率真小伙 2.0",
+    "id": "ICL_uranus_zh_male_shuaizhenxiaohuo_tob",
+    "desc": "通用场景",
+    "lang": "中文"
+   },
+   {
+    "name": "爽朗小阳 2.0",
+    "id": "ICL_uranus_zh_male_shuanglangxiaoyang_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "低沉缱绻 2.0",
+    "id": "ICL_uranus_zh_male_dichenqianquan_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "斯文青年 2.0",
+    "id": "ICL_uranus_zh_male_siwenqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "甜系男友 2.0",
+    "id": "ICL_uranus_zh_male_tianxinanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "贴心男友 2.0",
+    "id": "ICL_uranus_zh_male_tiexinnanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔男同桌 2.0",
+    "id": "ICL_uranus_zh_male_wenrounantongzhuo_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔男友 2.0",
+    "id": "ICL_uranus_zh_male_wenrounanyou_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔学长 2.0",
+    "id": "ICL_uranus_zh_male_wenrouxuezhang_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温润学者 2.0",
+    "id": "ICL_uranus_zh_male_wenrunxuezhe_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温顺少年 2.0",
+    "id": "ICL_uranus_zh_male_wenshunshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "寡言小哥 2.0",
+    "id": "ICL_uranus_zh_male_guayanxiaoge_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "小侯爷 2.0",
+    "id": "ICL_uranus_zh_male_xiaohouye_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "奶气小生 2.0",
+    "id": "ICL_uranus_zh_male_naiqixiaosheng_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "潇洒随性 2.0",
+    "id": "ICL_uranus_zh_male_xiaosasuixing_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "温柔内敛 2.0",
+    "id": "ICL_uranus_zh_male_wenrouneilian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "学霸男同桌 2.0",
+    "id": "ICL_uranus_zh_male_xuebanantongzhuo_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "学霸同桌 2.0",
+    "id": "ICL_uranus_zh_male_xuebatongzhuo_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "阳光洋洋 2.0",
+    "id": "ICL_uranus_zh_male_yangguangyangyang_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温暖少年 2.0",
+    "id": "ICL_uranus_zh_male_wennuanshaonian_tob",
+    "desc": "有声阅读",
+    "lang": "中文"
+   },
+   {
+    "name": "意气少年 2.0",
+    "id": "ICL_uranus_zh_male_yiqishaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "油腻大叔 2.0",
+    "id": "ICL_uranus_zh_male_younidashu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "幽默大爷 2.0",
+    "id": "ICL_uranus_zh_male_youmodaye_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "幽默叔叔 2.0",
+    "id": "ICL_uranus_zh_male_youmoshushu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "优柔帮主 2.0",
+    "id": "ICL_uranus_zh_male_youroubangzhu_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "优柔公子 2.0",
+    "id": "ICL_uranus_zh_male_yourougongzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "元气少年 2.0",
+    "id": "ICL_uranus_zh_male_yuanqishaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "仗剑君子 2.0",
+    "id": "ICL_uranus_zh_male_zhangjianjunzi_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "仗剑侠客 2.0",
+    "id": "ICL_uranus_zh_male_zhangjianxiake_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "正直青年 2.0",
+    "id": "ICL_uranus_zh_male_zhengzhiqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "直率青年 2.0",
+    "id": "ICL_uranus_zh_male_zhishuaiqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "中二青年 2.0",
+    "id": "ICL_uranus_zh_male_zhongerqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "自负青年 2.0",
+    "id": "ICL_uranus_zh_male_zifuqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "自信青年 2.0",
+    "id": "ICL_uranus_zh_male_zixinqingnian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "天才同桌 2.0",
+    "id": "ICL_uranus_zh_male_tiancaitongzhuo_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "清新沐沐 2.0",
+    "id": "ICL_uranus_zh_male_qingxinmumu_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "温婉珊珊 2.0",
+    "id": "ICL_uranus_zh_female_wenwanshanshan_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "热情艾娜 2.0",
+    "id": "ICL_uranus_zh_female_reqingaina_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   },
+   {
+    "name": "爽朗少年 2.0",
+    "id": "ICL_uranus_zh_male_shuanglangshaonian_tob",
+    "desc": "角色扮演",
+    "lang": "中文"
+   },
+   {
+    "name": "轻盈朵朵 2.0",
+    "id": "ICL_uranus_zh_female_qingyingduoduo_tob",
+    "desc": "客服场景",
+    "lang": "中文"
+   }
+  ]
+ },
+ {
+  "group": "Avatar 实时版（provider=doubao，国外环境）",
+  "voices": [
+   {
+    "name": "流畅女声 2.0",
+    "id": "zh_female_liuchangnv_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "中文"
+   },
+   {
+    "name": "Stokie",
+    "id": "en_female_stokie_uranus_bigtts",
+    "desc": "—",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Rowan",
+    "id": "en_male_adam-imitation_uranus_bigtts",
+    "desc": "通用场景, 有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Alberto",
+    "id": "en_male_alberto_uranus_bigtts",
+    "desc": "通用场景, 教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Alex",
+    "id": "en_male_alex_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Allison",
+    "id": "en_female_allison_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Charlotte",
+    "id": "en_female_authoritative-british_uranus_bigtts",
+    "desc": "教学场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Margaret",
+    "id": "en_female_authoritative-informative_uranus_bigtts",
+    "desc": "通用场景, 有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jones",
+    "id": "en_male_bill-jones_uranus_bigtts",
+    "desc": "趣味口音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Brad_Pitt",
+    "id": "en_male_brad_pitt_p1_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Brittney",
+    "id": "en_female_brittney_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Adrian",
+    "id": "en_male_bruce_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Leo",
+    "id": "en_male_chandler_p1_uranus_bigtts",
+    "desc": "趣味口音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Bob",
+    "id": "en_male_cowboy-bob_uranus_bigtts",
+    "desc": "通用场景, 教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "David",
+    "id": "en_male_david_uranus_bigtts",
+    "desc": "通用场景, 有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Orion",
+    "id": "en_male_deep-voice_uranus_bigtts",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Julian",
+    "id": "en_male_diyuwenrounan_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Harrison",
+    "id": "en_male_evil-guy-oxley_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jasper",
+    "id": "en_male_excited-male-voice_uranus_bigtts",
+    "desc": "趣味口音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Alfred",
+    "id": "en_male_father-christmas_uranus_bigtts",
+    "desc": "通用场景, 有声阅读, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Holly",
+    "id": "en_female_female_tutor_ms-jenny_uranus_bigtts",
+    "desc": "教学场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Felix",
+    "id": "en_male_fernando-martinez_uranus_bigtts",
+    "desc": "通用场景, 教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Godfather",
+    "id": "en_male_godfather_uranus_bigtts",
+    "desc": "有声阅读, 角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Gollum",
+    "id": "en_male_gollum_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Beau",
+    "id": "en_male_hades_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Hayley",
+    "id": "en_female_hayley_uranus_bigtts",
+    "desc": "教学场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jamie",
+    "id": "en_male_jamie_uranus_bigtts",
+    "desc": "通用场景, 教学场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jane",
+    "id": "en_female_jane_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jenny",
+    "id": "en_female_jenny_uranus_bigtts",
+    "desc": "通用场景, 客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Blaze",
+    "id": "en_male_jidongchuanjiaoshi_uranus_bigtts",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Jimmy",
+    "id": "en_male_jimmy_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Joanne",
+    "id": "en_female_joanne_uranus_bigtts",
+    "desc": "通用场景, 有声阅读, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Joker",
+    "id": "en_male_joker_uranus_bigtts",
+    "desc": "趣味口音, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Josh",
+    "id": "en_male_josh_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Josiah",
+    "id": "en_male_josh_coery_uranus_bigtts",
+    "desc": "教学场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Kevin",
+    "id": "en_male_kevin_uranus_bigtts",
+    "desc": "教学场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Knightley",
+    "id": "en_male_knightley_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Lynn",
+    "id": "en_female_lana_del_rey_kelley_d_p1_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Ivy",
+    "id": "en_female_lana_del_rey_parky_s_p1_uranus_bigtts",
+    "desc": "客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Marcus",
+    "id": "en_male_marcus_uranus_bigtts",
+    "desc": "通用场景, 有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Mel",
+    "id": "en_female_mel_uranus_bigtts",
+    "desc": "教学场景, 客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Hank",
+    "id": "en_male_michael_uranus_bigtts",
+    "desc": "通用场景, 教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Chip",
+    "id": "en_male_michael-mouse_uranus_bigtts",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Michael_Kevin",
+    "id": "en_male_michael_kevin_uranus_bigtts",
+    "desc": "通用场景, 教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Rory",
+    "id": "en_male_motivational-coach_uranus_bigtts",
+    "desc": "趣味口音, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Myra",
+    "id": "en_female_myra_uranus_bigtts",
+    "desc": "教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Sunny",
+    "id": "en_female_myra_cmb_uranus_bigtts",
+    "desc": "教学场景, 客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Blair",
+    "id": "en_female_nadia_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Natasha",
+    "id": "en_female_natasha_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Elaine",
+    "id": "en_female_pleasant-female_uranus_bigtts",
+    "desc": "有声阅读, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Rachel",
+    "id": "en_female_rachel_p1_uranus_bigtts",
+    "desc": "趣味口音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Ronald",
+    "id": "en_male_ronald_uranus_bigtts",
+    "desc": "有声阅读",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Russell",
+    "id": "en_male_russell_uranus_bigtts",
+    "desc": "通用场景, 教学场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Scarlet",
+    "id": "en_female_scarlet_p1_uranus_bigtts",
+    "desc": "客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Sharron",
+    "id": "en_female_sharron_uranus_bigtts",
+    "desc": "趣味口音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Simba",
+    "id": "en_male_simba_p1_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Skye",
+    "id": "en_female_skye_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Hiddleston",
+    "id": "en_male_tom_hiddleston_p1_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "英语"
+   },
+   {
+    "name": "Valentino",
+    "id": "en_male_valentino_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Clark",
+    "id": "en_male_valentino_corey_uranus_bigtts",
+    "desc": "视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Megan",
+    "id": "en_female_wenrouzhishijieshuonv_uranus_bigtts",
+    "desc": "客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Kayla",
+    "id": "en_female_xinwenjieshuonv_uranus_bigtts",
+    "desc": "角色扮演",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Dylan",
+    "id": "en_male_yangguangjieshuonan_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Zendaya",
+    "id": "en_female_zendaya_p1_uranus_bigtts",
+    "desc": "教学场景, 客服场景",
+    "lang": "美式英语"
+   },
+   {
+    "name": "Minimi",
+    "id": "jp_female_minimi_uranus_bigtts",
+    "desc": "通用场景, 视频配音",
+    "lang": "日语"
+   },
+   {
+    "name": "Linjianvhai",
+    "id": "ko_female_linjianvhai_uranus_bigtts",
+    "desc": "通用场景",
+    "lang": "韩语"
+   }
+  ]
+ },
+ {
+  "group": "Avatar 非实时版",
+  "voices": [
+   {
+    "name": "青涩青年音色",
+    "id": "male-qn-qingse",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "精英青年音色",
+    "id": "male-qn-jingying",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "霸道青年音色",
+    "id": "male-qn-badao",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "青年大学生音色",
+    "id": "male-qn-daxuesheng",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "少女音色",
+    "id": "female-shaonv",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "御姐音色",
+    "id": "female-yujie",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "成熟女性音色",
+    "id": "female-chengshu",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "甜美女性音色",
+    "id": "female-tianmei",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "青涩青年音色-beta",
+    "id": "male-qn-qingse-jingpin",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "精英青年音色-beta",
+    "id": "male-qn-jingying-jingpin",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "霸道青年音色-beta",
+    "id": "male-qn-badao-jingpin",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "青年大学生音色-beta",
+    "id": "male-qn-daxuesheng-jingpin",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "少女音色-beta",
+    "id": "female-shaonv-jingpin",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "御姐音色-beta",
+    "id": "female-yujie-jingpin",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "成熟女性音色-beta",
+    "id": "female-chengshu-jingpin",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "甜美女性音色-beta",
+    "id": "female-tianmei-jingpin",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "聪明男童",
+    "id": "clever_boy",
+    "desc": "角色扮演, 有声阅读",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "可爱男童",
+    "id": "cute_boy",
+    "desc": "角色扮演, 有声阅读",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "萌萌女童",
+    "id": "lovely_girl",
+    "desc": "角色扮演, 有声阅读",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "卡通猪小琪",
+    "id": "cartoon_pig",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "病娇弟弟",
+    "id": "bingjiao_didi",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "俊朗男友",
+    "id": "junlang_nanyou",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "纯真学弟",
+    "id": "chunzhen_xuedi",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "冷淡学长",
+    "id": "lengdan_xiongzhang",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "霸道少爷",
+    "id": "badao_shaoye",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "甜心小玲",
+    "id": "tianxin_xiaoling",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "俏皮萌妹",
+    "id": "qiaopi_mengmei",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "妩媚御姐",
+    "id": "wumei_yujie",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "嗲嗲学妹",
+    "id": "diadia_xuemei",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "淡雅学姐",
+    "id": "danya_xuejie",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "沉稳高管",
+    "id": "Chinese (Mandarin)_Reliable_Executive",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "新闻女声",
+    "id": "Chinese (Mandarin)_News_Anchor",
+    "desc": "视频配音",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "傲娇御姐",
+    "id": "Chinese (Mandarin)_Mature_Woman",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "不羁青年",
+    "id": "Chinese (Mandarin)_Unrestrained_Young_Man",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "嚣张小姐",
+    "id": "Arrogant_Miss",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "机械战甲",
+    "id": "Robot_Armor",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "热心大婶",
+    "id": "Chinese (Mandarin)_Kind-hearted_Antie",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "港普空姐",
+    "id": "Chinese (Mandarin)_HK_Flight_Attendant",
+    "desc": "客服场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "搞笑大爷",
+    "id": "Chinese (Mandarin)_Humorous_Elder",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "温润男声",
+    "id": "Chinese (Mandarin)_Gentleman",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "温暖闺蜜",
+    "id": "Chinese (Mandarin)_Warm_Bestie",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "播报男声",
+    "id": "Chinese (Mandarin)_Male_Announcer",
+    "desc": "视频配音",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "甜美女声",
+    "id": "Chinese (Mandarin)_Sweet_Lady",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "南方小哥",
+    "id": "Chinese (Mandarin)_Southern_Young_Man",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "阅历姐姐",
+    "id": "Chinese (Mandarin)_Wise_Women",
+    "desc": "有声阅读",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "温润青年",
+    "id": "Chinese (Mandarin)_Gentle_Youth",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "温暖少女",
+    "id": "Chinese (Mandarin)_Warm_Girl",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "花甲奶奶",
+    "id": "Chinese (Mandarin)_Kind-hearted_Elder",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "憨憨萌兽",
+    "id": "Chinese (Mandarin)_Cute_Spirit",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "电台男主播",
+    "id": "Chinese (Mandarin)_Radio_Host",
+    "desc": "视频配音",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "抒情男声",
+    "id": "Chinese (Mandarin)_Lyrical_Voice",
+    "desc": "有声阅读",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "率真弟弟",
+    "id": "Chinese (Mandarin)_Straightforward_Boy",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "真诚青年",
+    "id": "Chinese (Mandarin)_Sincere_Adult",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "温柔学姐",
+    "id": "Chinese (Mandarin)_Gentle_Senior",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "嘴硬竹马",
+    "id": "Chinese (Mandarin)_Stubborn_Friend",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "清脆少女",
+    "id": "Chinese (Mandarin)_Crisp_Girl",
+    "desc": "通用场景",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "清澈邻家弟弟",
+    "id": "Chinese (Mandarin)_Pure-hearted_Boy",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "软软女孩",
+    "id": "Chinese (Mandarin)_Soft_Girl",
+    "desc": "角色扮演",
+    "lang": "中文 (普通话)"
+   },
+   {
+    "name": "专业女主持",
+    "id": "Cantonese_ProfessionalHost（F)",
+    "desc": "客服场景, 视频配音",
+    "lang": "中文 (粤语)"
+   },
+   {
+    "name": "温柔女声",
+    "id": "Cantonese_GentleLady",
+    "desc": "通用场景",
+    "lang": "中文 (粤语)"
+   },
+   {
+    "name": "专业男主持",
+    "id": "Cantonese_ProfessionalHost（M)",
+    "desc": "客服场景, 视频配音",
+    "lang": "中文 (粤语)"
+   },
+   {
+    "name": "活泼男声",
+    "id": "Cantonese_PlayfulMan",
+    "desc": "角色扮演",
+    "lang": "中文 (粤语)"
+   },
+   {
+    "name": "可爱女孩",
+    "id": "Cantonese_CuteGirl",
+    "desc": "角色扮演",
+    "lang": "中文 (粤语)"
+   },
+   {
+    "name": "善良女声",
+    "id": "Cantonese_KindWoman",
+    "desc": "通用场景",
+    "lang": "中文 (粤语)"
+   },
+   {
+    "name": "Grinch",
+    "id": "Grinch",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Rudolph",
+    "id": "Rudolph",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Arnold",
+    "id": "Arnold",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Charming Santa",
+    "id": "Charming_Santa",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Charming Lady",
+    "id": "Charming_Lady",
+    "desc": "通用场景",
+    "lang": "英文"
+   },
+   {
+    "name": "Sweet Girl",
+    "id": "Sweet_Girl",
+    "desc": "角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Cute Elf",
+    "id": "Cute_Elf",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Attractive Girl",
+    "id": "Attractive_Girl",
+    "desc": "角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Serene Woman",
+    "id": "Serene_Woman",
+    "desc": "通用场景",
+    "lang": "英文"
+   },
+   {
+    "name": "Trustworthy Man",
+    "id": "English_Trustworthy_Man",
+    "desc": "通用场景",
+    "lang": "英文"
+   },
+   {
+    "name": "Graceful Lady",
+    "id": "English_Graceful_Lady",
+    "desc": "通用场景",
+    "lang": "英文"
+   },
+   {
+    "name": "Aussie Bloke",
+    "id": "English_Aussie_Bloke",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Whispering girl",
+    "id": "English_Whispering_girl",
+    "desc": "角色扮演",
+    "lang": "英文"
+   },
+   {
+    "name": "Diligent Man",
+    "id": "English_Diligent_Man",
+    "desc": "通用场景",
+    "lang": "英文"
+   },
+   {
+    "name": "Gentle-voiced man",
+    "id": "English_Gentle-voiced_man",
+    "desc": "通用场景",
+    "lang": "英文"
+   },
+   {
+    "name": "Intellectual Senior",
+    "id": "Japanese_IntellectualSenior",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Decisive Princess",
+    "id": "Japanese_DecisivePrincess",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Loyal Knight",
+    "id": "Japanese_LoyalKnight",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Dominant Man",
+    "id": "Japanese_DominantMan",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Serious Commander",
+    "id": "Japanese_SeriousCommander",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Cold Queen",
+    "id": "Japanese_ColdQueen",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Dependable Woman",
+    "id": "Japanese_DependableWoman",
+    "desc": "通用场景",
+    "lang": "日文"
+   },
+   {
+    "name": "Gentle Butler",
+    "id": "Japanese_GentleButler",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Kind Lady",
+    "id": "Japanese_KindLady",
+    "desc": "通用场景",
+    "lang": "日文"
+   },
+   {
+    "name": "Calm Lady",
+    "id": "Japanese_CalmLady",
+    "desc": "通用场景",
+    "lang": "日文"
+   },
+   {
+    "name": "Optimistic Youth",
+    "id": "Japanese_OptimisticYouth",
+    "desc": "通用场景",
+    "lang": "日文"
+   },
+   {
+    "name": "Generous Izakaya Owner",
+    "id": "Japanese_GenerousIzakayaOwner",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Sporty Student",
+    "id": "Japanese_SportyStudent",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Innocent Boy",
+    "id": "Japanese_InnocentBoy",
+    "desc": "角色扮演",
+    "lang": "日文"
+   },
+   {
+    "name": "Graceful Maiden",
+    "id": "Japanese_GracefulMaiden",
+    "desc": "通用场景",
+    "lang": "日文"
+   },
+   {
+    "name": "Sweet Girl",
+    "id": "Korean_SweetGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Cheerful Boyfriend",
+    "id": "Korean_CheerfulBoyfriend",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Enchanting Sister",
+    "id": "Korean_EnchantingSister",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Shy Girl",
+    "id": "Korean_ShyGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Reliable Sister",
+    "id": "Korean_ReliableSister",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Strict Boss",
+    "id": "Korean_StrictBoss",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Sassy Girl",
+    "id": "Korean_SassyGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Childhood Friend Girl",
+    "id": "Korean_ChildhoodFriendGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Playboy Charmer",
+    "id": "Korean_PlayboyCharmer",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Elegant Princess",
+    "id": "Korean_ElegantPrincess",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Brave Female Warrior",
+    "id": "Korean_BraveFemaleWarrior",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Brave Youth",
+    "id": "Korean_BraveYouth",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Calm Lady",
+    "id": "Korean_CalmLady",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Enthusiastic Teen",
+    "id": "Korean_EnthusiasticTeen",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Soothing Lady",
+    "id": "Korean_SoothingLady",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Intellectual Senior",
+    "id": "Korean_IntellectualSenior",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Lonely Warrior",
+    "id": "Korean_LonelyWarrior",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Mature Lady",
+    "id": "Korean_MatureLady",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Innocent Boy",
+    "id": "Korean_InnocentBoy",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Charming Sister",
+    "id": "Korean_CharmingSister",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Athletic Student",
+    "id": "Korean_AthleticStudent",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Brave Adventurer",
+    "id": "Korean_BraveAdventurer",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Calm Gentleman",
+    "id": "Korean_CalmGentleman",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Wise Elf",
+    "id": "Korean_WiseElf",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Cheerful Cool Junior",
+    "id": "Korean_CheerfulCoolJunior",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Decisive Queen",
+    "id": "Korean_DecisiveQueen",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Cold Young Man",
+    "id": "Korean_ColdYoungMan",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Mysterious Girl",
+    "id": "Korean_MysteriousGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Quirky Girl",
+    "id": "Korean_QuirkyGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Considerate Senior",
+    "id": "Korean_ConsiderateSenior",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Cheerful Little Sister",
+    "id": "Korean_CheerfulLittleSister",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Dominant Man",
+    "id": "Korean_DominantMan",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Airheaded Girl",
+    "id": "Korean_AirheadedGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Reliable Youth",
+    "id": "Korean_ReliableYouth",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Friendly Big Sister",
+    "id": "Korean_FriendlyBigSister",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Gentle Boss",
+    "id": "Korean_GentleBoss",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Cold Girl",
+    "id": "Korean_ColdGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Haughty Lady",
+    "id": "Korean_HaughtyLady",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Charming Elder Sister",
+    "id": "Korean_CharmingElderSister",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Intellectual Man",
+    "id": "Korean_IntellectualMan",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Caring Woman",
+    "id": "Korean_CaringWoman",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Wise Teacher",
+    "id": "Korean_WiseTeacher",
+    "desc": "教育场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Confident Boss",
+    "id": "Korean_ConfidentBoss",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Athletic Girl",
+    "id": "Korean_AthleticGirl",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Possessive Man",
+    "id": "Korean_PossessiveMan",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Gentle Woman",
+    "id": "Korean_GentleWoman",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Cocky Guy",
+    "id": "Korean_CockyGuy",
+    "desc": "角色扮演",
+    "lang": "韩文"
+   },
+   {
+    "name": "Thoughtful Woman",
+    "id": "Korean_ThoughtfulWoman",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Optimistic Youth",
+    "id": "Korean_OptimisticYouth",
+    "desc": "通用场景",
+    "lang": "韩文"
+   },
+   {
+    "name": "Serene Woman",
+    "id": "Spanish_SereneWoman",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Mature Partner",
+    "id": "Spanish_MaturePartner",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Captivating Storyteller",
+    "id": "Spanish_CaptivatingStoryteller",
+    "desc": "有声阅读",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Narrator",
+    "id": "Spanish_Narrator",
+    "desc": "有声阅读",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Wise Scholar",
+    "id": "Spanish_WiseScholar",
+    "desc": "有声阅读",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Kind-hearted Girl",
+    "id": "Spanish_Kind-heartedGirl",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Determined Manager",
+    "id": "Spanish_DeterminedManager",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Bossy Leader",
+    "id": "Spanish_BossyLeader",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Reserved Young Man",
+    "id": "Spanish_ReservedYoungMan",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Confident Woman",
+    "id": "Spanish_ConfidentWoman",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Thoughtful Man",
+    "id": "Spanish_ThoughtfulMan",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Strong-willed Boy",
+    "id": "Spanish_Strong-WilledBoy",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Sophisticated Lady",
+    "id": "Spanish_SophisticatedLady",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Rational Man",
+    "id": "Spanish_RationalMan",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Anime Character",
+    "id": "Spanish_AnimeCharacter",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Deep-toned Man",
+    "id": "Spanish_Deep-tonedMan",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Fussy hostess",
+    "id": "Spanish_Fussyhostess",
+    "desc": "客服场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Sincere Teen",
+    "id": "Spanish_SincereTeen",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Frank Lady",
+    "id": "Spanish_FrankLady",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Comedian",
+    "id": "Spanish_Comedian",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Debator",
+    "id": "Spanish_Debator",
+    "desc": "有声阅读",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Tough Boss",
+    "id": "Spanish_ToughBoss",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Wise Lady",
+    "id": "Spanish_Wiselady",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Steady Mentor",
+    "id": "Spanish_Steadymentor",
+    "desc": "教育场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Jovial Man",
+    "id": "Spanish_Jovialman",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Santa Claus",
+    "id": "Spanish_SantaClaus",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Rudolph",
+    "id": "Spanish_Rudolph",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Intonate Girl",
+    "id": "Spanish_Intonategirl",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Arnold",
+    "id": "Spanish_Arnold",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Ghost",
+    "id": "Spanish_Ghost",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Humorous Elder",
+    "id": "Spanish_HumorousElder",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Energetic Boy",
+    "id": "Spanish_EnergeticBoy",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Whimsical Girl",
+    "id": "Spanish_WhimsicalGirl",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Strict Boss",
+    "id": "Spanish_StrictBoss",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Reliable Man",
+    "id": "Spanish_ReliableMan",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Serene Elder",
+    "id": "Spanish_SereneElder",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Angry Man",
+    "id": "Spanish_AngryMan",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Assertive Queen",
+    "id": "Spanish_AssertiveQueen",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Caring Girlfriend",
+    "id": "Spanish_CaringGirlfriend",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Powerful Soldier",
+    "id": "Spanish_PowerfulSoldier",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Passionate Warrior",
+    "id": "Spanish_PassionateWarrior",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Chatty Girl",
+    "id": "Spanish_ChattyGirl",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Romantic Husband",
+    "id": "Spanish_RomanticHusband",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Compelling Girl",
+    "id": "Spanish_CompellingGirl",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Powerful Veteran",
+    "id": "Spanish_PowerfulVeteran",
+    "desc": "角色扮演",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Sensible Manager",
+    "id": "Spanish_SensibleManager",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Thoughtful Lady",
+    "id": "Spanish_ThoughtfulLady",
+    "desc": "通用场景",
+    "lang": "西班牙文"
+   },
+   {
+    "name": "Sentimental Lady",
+    "id": "Portuguese_SentimentalLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Bossy Leader",
+    "id": "Portuguese_BossyLeader",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Wise lady",
+    "id": "Portuguese_Wiselady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Strong-willed Boy",
+    "id": "Portuguese_Strong-WilledBoy",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Deep-voiced Gentleman",
+    "id": "Portuguese_Deep-VoicedGentleman",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Upset Girl",
+    "id": "Portuguese_UpsetGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Passionate Warrior",
+    "id": "Portuguese_PassionateWarrior",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Anime Character",
+    "id": "Portuguese_AnimeCharacter",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Confident Woman",
+    "id": "Portuguese_ConfidentWoman",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Angry Man",
+    "id": "Portuguese_AngryMan",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Captivating Storyteller",
+    "id": "Portuguese_CaptivatingStoryteller",
+    "desc": "有声阅读",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Godfather",
+    "id": "Portuguese_Godfather",
+    "desc": "角色扮演, 有声阅读",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Reserved Young Man",
+    "id": "Portuguese_ReservedYoungMan",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Smart Young Girl",
+    "id": "Portuguese_SmartYoungGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Kind-hearted Girl",
+    "id": "Portuguese_Kind-heartedGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Pompous lady",
+    "id": "Portuguese_Pompouslady",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Grinch",
+    "id": "Portuguese_Grinch",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Debator",
+    "id": "Portuguese_Debator",
+    "desc": "有声阅读",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Sweet Girl",
+    "id": "Portuguese_SweetGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Attractive Girl",
+    "id": "Portuguese_AttractiveGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Thoughtful Man",
+    "id": "Portuguese_ThoughtfulMan",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Playful Girl",
+    "id": "Portuguese_PlayfulGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Gorgeous Lady",
+    "id": "Portuguese_GorgeousLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Lovely Lady",
+    "id": "Portuguese_LovelyLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Serene Woman",
+    "id": "Portuguese_SereneWoman",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Sad Teen",
+    "id": "Portuguese_SadTeen",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Mature Partner",
+    "id": "Portuguese_MaturePartner",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Comedian",
+    "id": "Portuguese_Comedian",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Naughty Schoolgirl",
+    "id": "Portuguese_NaughtySchoolgirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Narrator",
+    "id": "Portuguese_Narrator",
+    "desc": "有声阅读",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Tough Boss",
+    "id": "Portuguese_ToughBoss",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Fussy hostess",
+    "id": "Portuguese_Fussyhostess",
+    "desc": "客服场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Dramatist",
+    "id": "Portuguese_Dramatist",
+    "desc": "有声阅读, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Steady Mentor",
+    "id": "Portuguese_Steadymentor",
+    "desc": "教育场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Jovial Man",
+    "id": "Portuguese_Jovialman",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Charming Queen",
+    "id": "Portuguese_CharmingQueen",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Santa Claus",
+    "id": "Portuguese_SantaClaus",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Rudolph",
+    "id": "Portuguese_Rudolph",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Arnold",
+    "id": "Portuguese_Arnold",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Charming Santa",
+    "id": "Portuguese_CharmingSanta",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Charming Lady",
+    "id": "Portuguese_CharmingLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Ghost",
+    "id": "Portuguese_Ghost",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Humorous Elder",
+    "id": "Portuguese_HumorousElder",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Calm Leader",
+    "id": "Portuguese_CalmLeader",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Gentle Teacher",
+    "id": "Portuguese_GentleTeacher",
+    "desc": "教育场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Energetic Boy",
+    "id": "Portuguese_EnergeticBoy",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Reliable Man",
+    "id": "Portuguese_ReliableMan",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Serene Elder",
+    "id": "Portuguese_SereneElder",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Grim Reaper",
+    "id": "Portuguese_GrimReaper",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Assertive Queen",
+    "id": "Portuguese_AssertiveQueen",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Whimsical Girl",
+    "id": "Portuguese_WhimsicalGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Stressed Lady",
+    "id": "Portuguese_StressedLady",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Friendly Neighbor",
+    "id": "Portuguese_FriendlyNeighbor",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Caring Girlfriend",
+    "id": "Portuguese_CaringGirlfriend",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Powerful Soldier",
+    "id": "Portuguese_PowerfulSoldier",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Fascinating Boy",
+    "id": "Portuguese_FascinatingBoy",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Romantic Husband",
+    "id": "Portuguese_RomanticHusband",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Strict Boss",
+    "id": "Portuguese_StrictBoss",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Inspiring Lady",
+    "id": "Portuguese_InspiringLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Playful Spirit",
+    "id": "Portuguese_PlayfulSpirit",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Elegant Girl",
+    "id": "Portuguese_ElegantGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Compelling Girl",
+    "id": "Portuguese_CompellingGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Powerful Veteran",
+    "id": "Portuguese_PowerfulVeteran",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Sensible Manager",
+    "id": "Portuguese_SensibleManager",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Thoughtful Lady",
+    "id": "Portuguese_ThoughtfulLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Theatrical Actor",
+    "id": "Portuguese_TheatricalActor",
+    "desc": "有声阅读, 角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Fragile Boy",
+    "id": "Portuguese_FragileBoy",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Chatty Girl",
+    "id": "Portuguese_ChattyGirl",
+    "desc": "角色扮演",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Conscientious Instructor",
+    "id": "Portuguese_Conscientiousinstructor",
+    "desc": "教育场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Rational Man",
+    "id": "Portuguese_RationalMan",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Wise Scholar",
+    "id": "Portuguese_WiseScholar",
+    "desc": "有声阅读",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Frank Lady",
+    "id": "Portuguese_FrankLady",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Determined Manager",
+    "id": "Portuguese_DeterminedManager",
+    "desc": "通用场景",
+    "lang": "葡萄牙文"
+   },
+   {
+    "name": "Level-Headed Man",
+    "id": "French_Male_Speech_New",
+    "desc": "通用场景",
+    "lang": "法文"
+   },
+   {
+    "name": "Patient Female Presenter",
+    "id": "French_Female_News Anchor",
+    "desc": "视频配音",
+    "lang": "法文"
+   },
+   {
+    "name": "Casual Man",
+    "id": "French_CasualMan",
+    "desc": "通用场景",
+    "lang": "法文"
+   },
+   {
+    "name": "Movie Lead Female",
+    "id": "French_MovieLeadFemale",
+    "desc": "视频配音, 角色扮演",
+    "lang": "法文"
+   },
+   {
+    "name": "Female Anchor",
+    "id": "French_FemaleAnchor",
+    "desc": "视频配音",
+    "lang": "法文"
+   },
+   {
+    "name": "Male Narrator",
+    "id": "French_MaleNarrator",
+    "desc": "有声阅读",
+    "lang": "法文"
+   },
+   {
+    "name": "Sweet Girl",
+    "id": "Indonesian_SweetGirl",
+    "desc": "角色扮演",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Reserved Young Man",
+    "id": "Indonesian_ReservedYoungMan",
+    "desc": "通用场景",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Charming Girl",
+    "id": "Indonesian_CharmingGirl",
+    "desc": "角色扮演",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Calm Woman",
+    "id": "Indonesian_CalmWoman",
+    "desc": "通用场景",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Confident Woman",
+    "id": "Indonesian_ConfidentWoman",
+    "desc": "通用场景",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Caring Man",
+    "id": "Indonesian_CaringMan",
+    "desc": "通用场景",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Bossy Leader",
+    "id": "Indonesian_BossyLeader",
+    "desc": "角色扮演",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Determined Boy",
+    "id": "Indonesian_DeterminedBoy",
+    "desc": "角色扮演",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Gentle Girl",
+    "id": "Indonesian_GentleGirl",
+    "desc": "角色扮演",
+    "lang": "印尼文"
+   },
+   {
+    "name": "Friendly Man",
+    "id": "German_FriendlyMan",
+    "desc": "通用场景",
+    "lang": "德文"
+   },
+   {
+    "name": "Sweet Lady",
+    "id": "German_SweetLady",
+    "desc": "通用场景",
+    "lang": "德文"
+   },
+   {
+    "name": "Playful Man",
+    "id": "German_PlayfulMan",
+    "desc": "角色扮演",
+    "lang": "德文"
+   },
+   {
+    "name": "Handsome Childhood Friend",
+    "id": "Russian_HandsomeChildhoodFriend",
+    "desc": "角色扮演",
+    "lang": "俄文"
+   },
+   {
+    "name": "Bright Queen",
+    "id": "Russian_BrightHeroine",
+    "desc": "角色扮演",
+    "lang": "俄文"
+   },
+   {
+    "name": "Ambitious Woman",
+    "id": "Russian_AmbitiousWoman",
+    "desc": "通用场景",
+    "lang": "俄文"
+   },
+   {
+    "name": "Reliable Man",
+    "id": "Russian_ReliableMan",
+    "desc": "通用场景",
+    "lang": "俄文"
+   },
+   {
+    "name": "Crazy Girl",
+    "id": "Russian_CrazyQueen",
+    "desc": "角色扮演",
+    "lang": "俄文"
+   },
+   {
+    "name": "Pessimistic Girl",
+    "id": "Russian_PessimisticGirl",
+    "desc": "角色扮演",
+    "lang": "俄文"
+   },
+   {
+    "name": "Attractive Guy",
+    "id": "Russian_AttractiveGuy",
+    "desc": "角色扮演",
+    "lang": "俄文"
+   },
+   {
+    "name": "Bad-tempered Boy",
+    "id": "Russian_Bad-temperedBoy",
+    "desc": "角色扮演",
+    "lang": "俄文"
+   },
+   {
+    "name": "Brave Heroine",
+    "id": "Italian_BraveHeroine",
+    "desc": "角色扮演",
+    "lang": "意大利文"
+   },
+   {
+    "name": "Narrator",
+    "id": "Italian_Narrator",
+    "desc": "有声阅读",
+    "lang": "意大利文"
+   },
+   {
+    "name": "Wandering Sorcerer",
+    "id": "Italian_WanderingSorcerer",
+    "desc": "趣味口音, 角色扮演",
+    "lang": "意大利文"
+   },
+   {
+    "name": "Diligent Leader",
+    "id": "Italian_DiligentLeader",
+    "desc": "角色扮演",
+    "lang": "意大利文"
+   },
+   {
+    "name": "Calm Woman",
+    "id": "Arabic_CalmWoman",
+    "desc": "通用场景",
+    "lang": "阿拉伯文"
+   },
+   {
+    "name": "Friendly Guy",
+    "id": "Arabic_FriendlyGuy",
+    "desc": "角色扮演",
+    "lang": "阿拉伯文"
+   },
+   {
+    "name": "Calm Woman",
+    "id": "Turkish_CalmWoman",
+    "desc": "通用场景",
+    "lang": "土耳其文"
+   },
+   {
+    "name": "Trustworthy man",
+    "id": "Turkish_Trustworthyman",
+    "desc": "通用场景",
+    "lang": "土耳其文"
+   },
+   {
+    "name": "Calm Woman",
+    "id": "Ukrainian_CalmWoman",
+    "desc": "通用场景",
+    "lang": "乌克兰文"
+   },
+   {
+    "name": "Wise Scholar",
+    "id": "Ukrainian_WiseScholar",
+    "desc": "有声阅读",
+    "lang": "乌克兰文"
+   },
+   {
+    "name": "Kind-hearted girl",
+    "id": "Dutch_kindhearted_girl",
+    "desc": "角色扮演",
+    "lang": "荷兰文"
+   },
+   {
+    "name": "Bossy leader",
+    "id": "Dutch_bossy_leader",
+    "desc": "角色扮演",
+    "lang": "荷兰文"
+   },
+   {
+    "name": "Kind-hearted girl",
+    "id": "Vietnamese_kindhearted_girl",
+    "desc": "角色扮演",
+    "lang": "越南文"
+   }
+  ]
+ }
+]

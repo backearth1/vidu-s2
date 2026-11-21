@@ -1,0 +1,17 @@
+# TLS 私钥与证书 —— 绝不能进仓库
+certs/
+
+# 运行时产物
+recordings/
+publish/
+hls/
+*.log
+*.m3u8
+*.ts
+
+# mediamtx 二进制（29MB，见 README 下载说明）；保留 yml 配置
+bin/mediamtx
+
+# 系统杂项
+.DS_Store
+node_modules/

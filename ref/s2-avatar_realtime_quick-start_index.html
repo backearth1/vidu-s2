@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live 前端连接 Demo</title>
+    <script src="https://g.alicdn.com/apsara-media-box/imp-web-rtc/7.1.9/aliyun-rtc-sdk.js"></script>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: #f5f5f5;
+        color: #1f2933;
+        overflow-x: hidden;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 24px;
+      }
+
+      .hint {
+        margin: 0 0 20px;
+        color: #667085;
+        line-height: 1.5;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+
+      .card {
+        border: 1px solid #d0d5dd;
+        border-radius: 12px;
+        background: #ffffff;
+        padding: 16px;
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      label {
+        display: block;
+        margin: 12px 0 6px;
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #d0d5dd;
+        border-radius: 8px;
+        padding: 9px 10px;
+        font: inherit;
+      }
+
+      textarea {
+        min-height: 72px;
+        resize: vertical;
+      }
+
+      button {
+        cursor: pointer;
+        border-color: #155eef;
+        background: #155eef;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      button.secondary {
+        border-color: #667085;
+        background: #667085;
+      }
+
+      button.danger {
+        border-color: #d92d20;
+        background: #d92d20;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .status-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        background: #eef4ff;
+        color: #155eef;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .pill.ok {
+        background: #ecfdf3;
+        color: #027a48;
+      }
+
+      .pill.warn {
+        background: #fff8e6;
+        color: #b54708;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .video-box {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #111827;
+        color: #ffffff;
+      }
+
+      .video-title {
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      #remoteVideoContainer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      #remoteVideoContainer .video-box {
+        margin-top: 0;
+      }
+
+      .video-stage {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        max-height: min(52vh, 360px);
+        background: #000000;
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        background: #000000;
+        object-fit: contain;
+      }
+
+      pre {
+        min-height: 180px;
+        max-height: 320px;
+        overflow: auto;
+        margin: 0;
+        border-radius: 10px;
+        background: #101828;
+        color: #d0d5dd;
+        padding: 12px;
+        font-size: 12px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        word-break: break-word;
+        max-width: 100%;
+      }
+
+      h2 {
+        margin: 16px 0 8px;
+        font-size: 18px;
+      }
+
+      .field-hint {
+        margin-top: 4px;
+        color: #667085;
+        font-size: 12px;
+      }
+
+      .notice {
+        display: none;
+        margin: 12px 0;
+        border: 1px solid #f79009;
+        border-radius: 10px;
+        background: #fff8e6;
+        color: #93370d;
+        padding: 10px 12px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .notice.show {
+        display: block;
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 12px;
+      }
+
+      .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #667085;
+        font-size: 13px;
+      }
+
+      .language-switcher label {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .language-switcher select {
+        width: auto;
+        min-width: 140px;
+        padding: 6px 8px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0b1220;
+          color: #e5e7eb;
+        }
+
+        .card {
+          border-color: #344054;
+          background: #111827;
+        }
+
+        .hint,
+        .field-hint,
+        .language-switcher {
+          color: #98a2b3;
+        }
+
+        .notice {
+          border-color: #b54708;
+          background: #3b2a0a;
+          color: #fedf89;
+        }
+
+        input,
+        select,
+        textarea {
+          border-color: #344054;
+          background: #0b1220;
+          color: #e5e7eb;
+        }
+      }
+
+      @media (max-width: 900px) {
+        main {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="toolbar">
+        <div class="language-switcher">
+          <label for="language" data-i18n="language.label">语言</label>
+          <select id="language" aria-label="Language">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+
+      <h1 data-i18n="page.title">Live 前端连接 Demo</h1>
+      <p class="hint" data-i18n-html="page.hint">
+        Quick Start：<code>python3 quickstart.py --api-key vda_xxx</code><br />
+        页面会完成三步体验：创建 live 会话、建立 App WebSocket、加入 AliRTC。点击「创建并连接」后，请允许浏览器使用麦克风和摄像头。<br />
+        内置代理转发 <code>/proxy/{env}/live/...</code>，避免浏览器跨域。
+      </p>
+
+      <div class="layout">
+        <section class="card">
+          <label for="environment" data-i18n="field.environment">环境</label>
+          <select id="environment">
+            <option value="cn" selected data-i18n="environment.cn">国内</option>
+            <option value="ovs" data-i18n="environment.ovs">海外</option>
+          </select>
+          <div class="field-hint" data-i18n-html="field.environmentHint">
+            请求走 <code>/proxy/{env}/live/...</code>。通过 Python quick start 启动时会自动预填。
+          </div>
+
+          <label for="authToken">API Key（vda_...）</label>
+          <input id="authToken" placeholder="vda_..." autocomplete="off" />
+
+          <label for="characterId">character_id</label>
+          <input id="characterId" type="number" value="1" min="0" />
+
+          <label for="callMode">call_mode</label>
+          <select id="callMode">
+            <option value="video" selected>video</option>
+            <option value="audio">audio</option>
+          </select>
+
+          <label for="model">model</label>
+          <select id="model">
+            <option value="vidu-s2" selected>vidu-s2</option>
+            <option value="vidu-s1">vidu-s1</option>
+          </select>
+          <div class="field-hint" data-i18n-html="field.modelHint">
+            默认 vidu-s2，可选 vidu-s1；仅 video 模式生效。
+          </div>
+
+          <label for="avatarPersona">avatar.persona</label>
+          <textarea id="avatarPersona">你是甜甜 Tina，我的声音像温热的奶茶，甜甜的、暖暖的，但解决问题可一点都不含糊哦！</textarea>
+
+          <label for="avatarImageUri">avatar.image_uri</label>
+          <input
+            id="avatarImageUri"
+            value="https://scene.vidu.zone/media-asset/083014-Qww8rvO5sOtAKZW8.png"
+          />
+
+          <label for="avatarName">avatar.name</label>
+          <input id="avatarName" value="甜甜 Tina" />
+
+          <label for="avatarVoice">avatar.voice</label>
+          <input id="avatarVoice" value="Tina" />
+
+          <label for="personaEnhance" style="display: inline-flex; align-items: center; gap: 8px; width: auto; cursor: pointer;">
+            <input type="checkbox" id="personaEnhance" style="width: auto; margin: 0;" />
+            <span data-i18n="field.personaEnhance">启用人设增强（avatar.persona_enhance，仅 video）</span>
+          </label>
+
+          <div class="actions">
+            <button id="joinBtn" data-i18n="button.join">创建并连接</button>
+            <button id="hangupBtn" class="danger" disabled data-i18n="button.hangup">挂断</button>
+          </div>
+          <button id="clearBtn" class="secondary" style="margin-top: 8px" data-i18n="button.clearLog">清空日志</button>
+
+          <div class="status-row">
+            <span id="apiStatus" class="pill warn">API idle</span>
+            <span id="wsStatus" class="pill warn">WS idle</span>
+            <span id="rtcStatus" class="pill warn">RTC idle</span>
+          </div>
+          <div id="mediaNotice" class="notice"></div>
+
+          <label for="textInput" data-i18n="field.textInput">发送文本（WS type=99）</label>
+          <textarea id="textInput" placeholder="输入消息后点击发送；Ctrl+Enter / Enter 快捷发送，Shift+Enter 换行" data-i18n-placeholder="field.textInputPlaceholder"></textarea>
+          <div class="actions">
+            <button id="sendTextBtn" class="secondary" disabled data-i18n="button.sendText">发送文本</button>
+          </div>
+
+          <div style="margin-top: 12px">
+            <strong data-i18n="section.currentSession">当前会话</strong>
+            <pre id="sessionData" data-empty-session="true">尚未创建 live</pre>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="video-grid">
+            <div class="video-box">
+              <div class="video-title" data-i18n="video.localPreview">本地预览</div>
+              <div class="video-stage">
+                <video id="localPreviewer" muted playsinline autoplay></video>
+              </div>
+            </div>
+            <div class="video-box">
+              <div class="video-title" data-i18n="video.remoteStream">远端流</div>
+              <div id="remoteVideoContainer"></div>
+            </div>
+          </div>
+
+          <h2 data-i18n="section.eventLog">事件日志</h2>
+          <pre id="eventLog"></pre>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const $ = (selector) => document.querySelector(selector);
+
+      const joinBtn = $("#joinBtn");
+      const hangupBtn = $("#hangupBtn");
+      const clearBtn = $("#clearBtn");
+      const sendTextBtn = $("#sendTextBtn");
+      const eventLog = $("#eventLog");
+      const sessionData = $("#sessionData");
+      const mediaNotice = $("#mediaNotice");
+      const remoteVideoContainer = $("#remoteVideoContainer");
+
+      const environments = {
+        cn: { proxyPrefix: "/proxy/cn" },
+        ovs: { proxyPrefix: "/proxy/ovs" },
+      };
+
+      const fallbackLanguage = "zh";
+      const languageStorageKey = "liveQuickStartLanguage";
+      const translations = {
+        zh: {
+          "page.title": "Live 前端连接 Demo",
+          "page.hint": "Quick Start：<code>python3 quickstart.py --api-key vda_xxx</code><br />页面会完成三步体验：创建 live 会话、建立 App WebSocket、加入 AliRTC。点击「创建并连接」后，请允许浏览器使用麦克风和摄像头。<br />内置代理转发 <code>/proxy/{env}/live/...</code>，避免浏览器跨域。",
+          "language.label": "语言",
+          "environment.cn": "国内",
+          "environment.ovs": "海外",
+          "field.environment": "环境",
+          "field.environmentHint": "请求走 <code>/proxy/{env}/live/...</code>。通过 Python quick start 启动时会自动预填。",
+          "field.modelHint": "默认 vidu-s2，可选 vidu-s1；仅 video 模式生效。",
+          "field.textInput": "发送文本（WS type=99）",
+          "field.textInputPlaceholder": "输入消息后点击发送；Ctrl+Enter / Enter 快捷发送，Shift+Enter 换行",
+          "field.personaEnhance": "启用人设增强（avatar.persona_enhance，仅 video）",
+          "button.join": "创建并连接",
+          "button.hangup": "挂断",
+          "button.clearLog": "清空日志",
+          "button.sendText": "发送文本",
+          "section.currentSession": "当前会话",
+          "section.eventLog": "事件日志",
+          "video.localPreview": "本地预览",
+          "video.remoteStream": "远端流",
+          "session.empty": "尚未创建 live",
+          "avatar.personaDefault": "你是甜甜 Tina，我的声音像温热的奶茶，甜甜的、暖暖的，但解决问题可一点都不含糊哦！",
+          "avatar.nameDefault": "甜甜 Tina",
+          "status.apiIdle": "API idle",
+          "status.apiCreating": "API creating",
+          "status.apiLive": "API live {id}",
+          "status.apiFailed": "API failed",
+          "status.wsIdle": "WS idle",
+          "status.wsConnecting": "WS connecting",
+          "status.wsConnected": "WS connected",
+          "status.wsClosed": "WS closed {code}",
+          "status.wsError": "WS error",
+          "status.wsInitAck": "WS init ack",
+          "status.wsNotReady": "WS NOT_READY",
+          "status.wsInitFailed": "WS init failed",
+          "status.wsForceHangup": "WS force hangup",
+          "status.wsTextSent": "WS text sent",
+          "status.rtcIdle": "RTC idle",
+          "status.rtcJoining": "RTC joining",
+          "status.rtcJoined": "RTC joined",
+          "status.rtcBye": "RTC bye {code}",
+          "status.rtcFailed": "RTC failed",
+          "status.deviceNotReady": "{device}未就绪",
+          "device.camera": "摄像头",
+          "device.microphone": "麦克风",
+          "error.apiKeyRequired": "请先填写 API Key",
+          "error.avatarRequired": "avatar.persona 和 avatar.image_uri 都必须填写",
+          "error.actionHttpFailed": "{action} failed: HTTP {status} {text}",
+          "error.actionInvalidJson": "{action} failed: invalid JSON response: {text}",
+          "error.createLiveAction": "Create live",
+          "error.appWsNotCreated": "App WS 未创建",
+          "error.connInitTimeout": "等待 conn_init_ack 超时",
+          "error.connInitFailed": "conn_init 失败",
+          "error.appWsClosedEarly": "App WS 提前关闭: {code}",
+          "error.liveNotCreated": "尚未创建 live，请先点击「创建并连接」",
+          "error.appWsNotReady": "App WS 未连接，请等待状态变为 WS init ack",
+          "error.actionFailed": "{action}失败：{reason}",
+          "error.emptyText": "发送文本失败：内容为空",
+          "error.sendTextFailed": "发送文本失败：{reason}",
+          "error.sendButtonDisabled": "发送按钮尚未启用",
+          "error.sdkNotLoaded": "AliRTC Web SDK 未加载",
+          "error.browserUnsupported": "当前浏览器不支持 AliRTC: {reason}",
+          "error.mediaPermission": "{device}未授权：请点击浏览器地址栏左侧的权限图标，允许当前页面使用{device}后重试。",
+          "error.mediaNotFound": "未检测到可用{device}：请确认设备已连接，并且系统设置中可以被浏览器访问。",
+          "error.mediaBusy": "{device}无法启动：可能被其他应用占用，请关闭占用{device}的软件后重试。",
+          "error.mediaGeneric": "{device}启动失败：请确认浏览器已允许权限、设备未被占用，然后重试。",
+          "log.liveCreated": "创建 live 成功",
+          "log.connInitRetry": "conn_init 重试（{delayMs}ms 后）",
+          "log.connectAppWs": "连接 App WS",
+          "log.appWsConnected": "App WS 已连接",
+          "log.appWsMessage": "App WS 收到消息",
+          "log.appWsClosed": "App WS 已关闭",
+          "log.appWsError": "App WS 发生错误",
+          "log.backendText": "后端文本响应",
+          "log.sendAppMessage": "App WS 发送消息",
+          "log.sendTextMessage": "App WS 发送文本消息",
+          "log.rtcJoined": "AliRTC 入会成功",
+          "log.rtcMethod": "AliRTC 调用 {methodName}",
+          "log.remoteUserOnline": "远端用户上线",
+          "log.remoteUserOffline": "远端用户下线",
+          "log.remoteCameraState": "远端摄像头流订阅状态变化",
+          "log.remoteScreenState": "远端屏幕流订阅状态变化",
+          "log.authWillExpire": "AliRTC 鉴权即将过期，请重新创建会话",
+          "log.authExpired": "AliRTC 鉴权已过期，请重新创建会话",
+          "log.remoteAutoplayFailed": "远端 video 自动播放失败，请手动点击播放",
+          "log.hangupSignalFailed": "发送挂断信令失败，继续清理本地状态",
+          "log.rtcCleanupFailed": "AliRTC 清理失败",
+          "log.queryPrefilled": "已从 quick start 参数预填页面",
+          "log.videoWaitConnInit": "video 模式：等待 conn_init_ack 后再入会 AliRTC",
+          "log.startFailed": "启动失败",
+          "log.hangupFailed": "挂断失败",
+        },
+        en: {
+          "page.title": "Live Frontend Connection Demo",
+          "page.hint": "Quick Start: <code>python3 quickstart.py --api-key vda_xxx</code><br />This page walks through three steps: create a live session, open the App WebSocket, and join AliRTC. After clicking \"Create and Connect\", allow browser access to your microphone and camera.<br />The built-in proxy forwards <code>/proxy/{env}/live/...</code> requests to avoid browser CORS issues.",
+          "language.label": "Language",
+          "environment.cn": "China",
+          "environment.ovs": "Global",
+          "field.environment": "Environment",
+          "field.environmentHint": "Requests go through <code>/proxy/{env}/live/...</code>. Values are prefilled automatically when launched by Python quick start.",
+          "field.modelHint": "Defaults to vidu-s2; vidu-s1 is also selectable. video mode only.",
+          "field.textInput": "Send Text (WS type=99)",
+          "field.textInputPlaceholder": "Enter a message and send; Ctrl+Enter / Enter sends, Shift+Enter inserts a newline",
+          "field.personaEnhance": "Enable persona enhancement (avatar.persona_enhance, video only)",
+          "button.join": "Create and Connect",
+          "button.hangup": "Hang Up",
+          "button.clearLog": "Clear Log",
+          "button.sendText": "Send Text",
+          "section.currentSession": "Current Session",
+          "section.eventLog": "Event Log",
+          "video.localPreview": "Local Preview",
+          "video.remoteStream": "Remote Stream",
+          "session.empty": "No live session created",
+          "avatar.personaDefault": "You are Sweet Tina. My voice feels like warm milk tea: sweet and cozy, but I am still sharp when solving problems.",
+          "avatar.nameDefault": "Sweet Tina",
+          "status.apiIdle": "API idle",
+          "status.apiCreating": "API creating",
+          "status.apiLive": "API live {id}",
+          "status.apiFailed": "API failed",
+          "status.wsIdle": "WS idle",
+          "status.wsConnecting": "WS connecting",
+          "status.wsConnected": "WS connected",
+          "status.wsClosed": "WS closed {code}",
+          "status.wsError": "WS error",
+          "status.wsInitAck": "WS init ack",
+          "status.wsNotReady": "WS NOT_READY",
+          "status.wsInitFailed": "WS init failed",
+          "status.wsForceHangup": "WS force hangup",
+          "status.wsTextSent": "WS text sent",
+          "status.rtcIdle": "RTC idle",
+          "status.rtcJoining": "RTC joining",
+          "status.rtcJoined": "RTC joined",
+          "status.rtcBye": "RTC bye {code}",
+          "status.rtcFailed": "RTC failed",
+          "status.deviceNotReady": "{device} not ready",
+          "device.camera": "camera",
+          "device.microphone": "microphone",
+          "error.apiKeyRequired": "Please enter an API Key first",
+          "error.avatarRequired": "avatar.persona and avatar.image_uri are required",
+          "error.actionHttpFailed": "{action} failed: HTTP {status} {text}",
+          "error.actionInvalidJson": "{action} failed: invalid JSON response: {text}",
+          "error.createLiveAction": "Create live",
+          "error.appWsNotCreated": "App WS has not been created",
+          "error.connInitTimeout": "Timed out waiting for conn_init_ack",
+          "error.connInitFailed": "conn_init failed",
+          "error.appWsClosedEarly": "App WS closed early: {code}",
+          "error.liveNotCreated": "No live session yet. Click \"Create and Connect\" first",
+          "error.appWsNotReady": "App WS is not connected. Wait until the status becomes WS init ack",
+          "error.actionFailed": "{action} failed: {reason}",
+          "error.emptyText": "Failed to send text: content is empty",
+          "error.sendTextFailed": "Failed to send text: {reason}",
+          "error.sendButtonDisabled": "send button is not enabled yet",
+          "error.sdkNotLoaded": "AliRTC Web SDK is not loaded",
+          "error.browserUnsupported": "This browser does not support AliRTC: {reason}",
+          "error.mediaPermission": "{device} permission denied: click the permission icon on the left side of the browser address bar, allow this page to use the {device}, then try again.",
+          "error.mediaNotFound": "No available {device} detected: make sure the device is connected and accessible to the browser in system settings.",
+          "error.mediaBusy": "{device} could not start: it may be used by another app. Close the app using the {device}, then try again.",
+          "error.mediaGeneric": "{device} failed to start: make sure browser permission is allowed and the device is not in use, then try again.",
+          "log.liveCreated": "Live created",
+          "log.connInitRetry": "Retry conn_init after {delayMs}ms",
+          "log.connectAppWs": "Connecting App WS",
+          "log.appWsConnected": "App WS connected",
+          "log.appWsMessage": "App WS message received",
+          "log.appWsClosed": "App WS closed",
+          "log.appWsError": "App WS error",
+          "log.backendText": "Backend text response",
+          "log.sendAppMessage": "App WS send message",
+          "log.sendTextMessage": "App WS send text message",
+          "log.rtcJoined": "AliRTC joined",
+          "log.rtcMethod": "AliRTC call {methodName}",
+          "log.remoteUserOnline": "Remote user online",
+          "log.remoteUserOffline": "Remote user offline",
+          "log.remoteCameraState": "Remote camera stream subscribe state changed",
+          "log.remoteScreenState": "Remote screen stream subscribe state changed",
+          "log.authWillExpire": "AliRTC auth will expire soon. Please create a new session.",
+          "log.authExpired": "AliRTC auth expired. Please create a new session.",
+          "log.remoteAutoplayFailed": "Remote video autoplay failed. Click play manually.",
+          "log.hangupSignalFailed": "Failed to send hangup signal. Continuing local cleanup.",
+          "log.rtcCleanupFailed": "AliRTC cleanup failed",
+          "log.queryPrefilled": "Prefilled page from quick start parameters",
+          "log.videoWaitConnInit": "video mode: wait for conn_init_ack before joining AliRTC",
+          "log.startFailed": "Start failed",
+          "log.hangupFailed": "Hangup failed",
+        },
+      };
+
+      let currentLanguage = fallbackLanguage;
+
+      const state = {
+        aliRtcEngine: undefined,
+        appSocket: undefined,
+        live: undefined,
+        rtc: undefined,
+        connId: newConnectionId(),
+        seqId: 1,
+        remoteVideoElMap: new Map(),
+        connInitRetryTimer: undefined,
+      };
+
+      function supportedLanguage(language) {
+        const normalized = String(language || "").toLowerCase();
+        return normalized.startsWith("zh") ? "zh" : normalized.startsWith("en") ? "en" : "";
+      }
+
+      function detectInitialLanguage() {
+        const params = new URLSearchParams(window.location.search);
+        const queryLanguage = supportedLanguage(params.get("lang") || params.get("language"));
+        if (queryLanguage) {
+          return queryLanguage;
+        }
+        const storedLanguage = supportedLanguage(window.localStorage?.getItem(languageStorageKey));
+        if (storedLanguage) {
+          return storedLanguage;
+        }
+        for (const language of navigator.languages || [navigator.language]) {
+          const detected = supportedLanguage(language);
+          if (detected) {
+            return detected;
+          }
+        }
+        return fallbackLanguage;
+      }
+
+      function t(key, vars = {}) {
+        const template = translations[currentLanguage]?.[key] ?? translations[fallbackLanguage]?.[key] ?? key;
+        return template.replace(/\{(\w+)\}/g, (_, name) => String(vars[name] ?? ""));
+      }
+
+      function translateStaticText() {
+        document.documentElement.lang = currentLanguage === "zh" ? "zh-CN" : "en";
+        document.title = t("page.title");
+        $("#language").value = currentLanguage;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          el.textContent = t(el.dataset.i18n);
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+          el.innerHTML = t(el.dataset.i18nHtml);
+        });
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          el.placeholder = t(el.dataset.i18nPlaceholder);
+        });
+      }
+
+      function translateStatuses() {
+        document.querySelectorAll("[data-status-key]").forEach((el) => {
+          const vars = safeJson(el.dataset.statusVars || "{}") || {};
+          el.textContent = t(el.dataset.statusKey, vars);
+        });
+      }
+
+      function syncAvatarDefaults() {
+        const persona = $("#avatarPersona");
+        const name = $("#avatarName");
+        const knownPersonaDefaults = Object.values(translations).map((items) => items["avatar.personaDefault"]);
+        const knownNameDefaults = Object.values(translations).map((items) => items["avatar.nameDefault"]);
+        if (knownPersonaDefaults.includes(persona.value)) {
+          persona.value = t("avatar.personaDefault");
+        }
+        if (knownNameDefaults.includes(name.value)) {
+          name.value = t("avatar.nameDefault");
+        }
+      }
+
+      function applyLanguage(language, { persist = false } = {}) {
+        currentLanguage = supportedLanguage(language) || fallbackLanguage;
+        if (persist) {
+          window.localStorage?.setItem(languageStorageKey, currentLanguage);
+        }
+        translateStaticText();
+        translateStatuses();
+        syncAvatarDefaults();
+        if (sessionData.dataset.emptySession === "true") {
+          sessionData.textContent = t("session.empty");
+        }
+      }
+
+      function newConnectionId() {
+        if (typeof crypto?.randomUUID === "function") {
+          return crypto.randomUUID();
+        }
+        const bytes = new Uint8Array(16);
+        crypto.getRandomValues(bytes);
+        bytes[6] = (bytes[6] & 0x0f) | 0x40;
+        bytes[8] = (bytes[8] & 0x3f) | 0x80;
+        const hex = [...bytes].map((byte) => byte.toString(16).padStart(2, "0"));
+        return `${hex.slice(0, 4).join("")}-${hex.slice(4, 6).join("")}-${hex.slice(6, 8).join("")}-${hex.slice(8, 10).join("")}-${hex.slice(10).join("")}`;
+      }
+
+      function resolveProxyPrefix(envKey) {
+        const env = environments[envKey] ?? environments.cn;
+        return env.proxyPrefix;
+      }
+
+      function apiUrl(path) {
+        const prefix = resolveProxyPrefix($("#environment").value);
+        return prefix ? `${prefix}${path}` : path;
+      }
+
+      function wsUrl(path, query) {
+        const prefix = resolveProxyPrefix($("#environment").value);
+        const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+        return `${protocol}//${window.location.host}${prefix}${path}?${query}`;
+      }
+
+      function setStatus(id, key, kind = "warn", vars = {}) {
+        const el = $(id);
+        el.dataset.statusKey = key;
+        el.dataset.statusVars = JSON.stringify(vars);
+        el.textContent = t(key, vars);
+        el.className = `pill ${kind}`;
+      }
+
+      function log(message, data) {
+        const time = new Date().toLocaleTimeString();
+        const detail = data === undefined ? "" : `\n${JSON.stringify(data, null, 2)}`;
+        eventLog.textContent += `[${time}] ${message}${detail}\n`;
+        eventLog.scrollTop = eventLog.scrollHeight;
+      }
+
+      function stripAuthPrefix(input) {
+        const value = input.trim();
+        if (value.startsWith("Bearer ")) {
+          return value.slice("Bearer ".length).trim();
+        }
+        if (value.startsWith("Token ")) {
+          return value.slice("Token ".length).trim();
+        }
+        return value;
+      }
+
+      function httpAuthHeader(input) {
+        const token = stripAuthPrefix(input);
+        if (!token) {
+          return "";
+        }
+        return token.startsWith("vda") ? `Token ${token}` : token;
+      }
+
+      function wsAuthQuery(input) {
+        return stripAuthPrefix(input);
+      }
+
+      function isVideoMode() {
+        return $("#callMode").value === "video";
+      }
+
+      function setInteractiveEnabled(enabled) {
+        sendTextBtn.disabled = !enabled;
+      }
+
+      function showNotice(message, data) {
+        mediaNotice.textContent = message;
+        mediaNotice.classList.add("show");
+        log(message, data);
+      }
+
+      function clearNotice() {
+        mediaNotice.textContent = "";
+        mediaNotice.classList.remove("show");
+      }
+
+      async function parseJsonResponse(response, action) {
+        const text = await response.text();
+        if (!response.ok) {
+          throw new Error(t("error.actionHttpFailed", { action, status: response.status, text }));
+        }
+        try {
+          return text ? JSON.parse(text) : {};
+        } catch (_error) {
+          throw new Error(t("error.actionInvalidJson", { action, text: text.slice(0, 200) }));
+        }
+      }
+
+      async function createLive() {
+        const auth = httpAuthHeader($("#authToken").value);
+        if (!auth) {
+          throw new Error(t("error.apiKeyRequired"));
+        }
+        const avatar = {
+          persona: $("#avatarPersona").value.trim(),
+          image_uri: $("#avatarImageUri").value.trim(),
+          name: $("#avatarName").value.trim(),
+          voice: $("#avatarVoice").value.trim(),
+        };
+        if ($("#personaEnhance").checked) {
+          avatar.persona_enhance = true;
+        }
+        if (!avatar.persona || !avatar.image_uri) {
+          throw new Error(t("error.avatarRequired"));
+        }
+        const body = {
+          call_mode: $("#callMode").value,
+          character_id: String($("#characterId").value),
+          model: $("#model").value,
+          avatar,
+        };
+
+        setStatus("#apiStatus", "status.apiCreating", "warn");
+        log("POST /live/s_avatar/realtime", body);
+        const response = await fetch(apiUrl("/live/s_avatar/realtime"), {
+          method: "POST",
+          headers: {
+            Authorization: auth,
+            "Content-Type": "application/json",
+            Accept: "*/*",
+          },
+          body: JSON.stringify(body),
+        });
+        const payload = await parseJsonResponse(response, t("error.createLiveAction"));
+        state.live = payload.live;
+        state.rtc = payload.rtc;
+        sessionData.textContent = JSON.stringify(payload, null, 2);
+        sessionData.dataset.emptySession = "false";
+        setStatus("#apiStatus", "status.apiLive", "ok", { id: state.live.id });
+        log(t("log.liveCreated"), payload);
+      }
+
+      function buildConnInitSignal() {
+        return {
+          type: 1,
+          live_id: String(state.live.id),
+          conn_id: state.connId,
+          seq_id: state.seqId++,
+          payload: {
+            conn_init: {
+              version: 1,
+            },
+          },
+        };
+      }
+
+      function scheduleConnInitRetry(delayMs = 2000) {
+        clearConnInitRetry();
+        state.connInitRetryTimer = window.setTimeout(() => {
+          log(t("log.connInitRetry", { delayMs }));
+          sendConnInit();
+        }, delayMs);
+      }
+
+      function clearConnInitRetry() {
+        if (state.connInitRetryTimer) {
+          window.clearTimeout(state.connInitRetryTimer);
+          state.connInitRetryTimer = undefined;
+        }
+      }
+
+      function sendConnInit() {
+        sendAppSignal(buildConnInitSignal());
+      }
+
+      function connectAppWebSocket() {
+        const wsToken = wsAuthQuery($("#authToken").value);
+        if (!wsToken) {
+          throw new Error(t("error.apiKeyRequired"));
+        }
+        const query = new URLSearchParams({
+          live_id: String(state.live.id),
+          conn_id: state.connId,
+          authorization: wsToken,
+        });
+        const url = wsUrl("/live/ws/live/connect", query);
+        log(t("log.connectAppWs"), { url: url.replace(wsToken, `${wsToken.slice(0, 12)}...`) });
+        state.appSocket = new WebSocket(url);
+        setStatus("#wsStatus", "status.wsConnecting", "warn");
+
+        state.appSocket.addEventListener("open", () => {
+          setStatus("#wsStatus", "status.wsConnected", "ok");
+          log(t("log.appWsConnected"));
+          sendConnInit();
+        });
+        state.appSocket.addEventListener("message", (event) => {
+          const payload = safeJson(event.data);
+          log(t("log.appWsMessage"), payload ?? event.data);
+          handleAppMessage(payload);
+        });
+        state.appSocket.addEventListener("close", (event) => {
+          clearConnInitRetry();
+          setStatus("#wsStatus", "status.wsClosed", "warn", { code: event.code });
+          setInteractiveEnabled(false);
+          log(t("log.appWsClosed"), { code: event.code, reason: event.reason });
+        });
+        state.appSocket.addEventListener("error", () => {
+          setStatus("#wsStatus", "status.wsError", "warn");
+          log(t("log.appWsError"));
+        });
+      }
+
+      function waitForConnInitAck(timeoutMs = 60000) {
+        return new Promise((resolve, reject) => {
+          const socket = state.appSocket;
+          if (!socket) {
+            reject(new Error(t("error.appWsNotCreated")));
+            return;
+          }
+          const timer = window.setTimeout(() => {
+            cleanup();
+            reject(new Error(t("error.connInitTimeout")));
+          }, timeoutMs);
+
+          function onMessage(event) {
+            const payload = safeJson(event.data);
+            const ack = payload?.payload?.conn_init_ack;
+            if (payload?.type !== 2 || !ack) {
+              return;
+            }
+            if (ack.success) {
+              cleanup();
+              resolve(payload);
+              return;
+            }
+            if (ack.error_code === "NOT_READY") {
+              return;
+            }
+            cleanup();
+            reject(new Error(ack.error_msg || ack.error_code || t("error.connInitFailed")));
+          }
+
+          function onClose(event) {
+            cleanup();
+            reject(new Error(t("error.appWsClosedEarly", { code: event.code })));
+          }
+
+          function cleanup() {
+            window.clearTimeout(timer);
+            socket.removeEventListener("message", onMessage);
+            socket.removeEventListener("close", onClose);
+          }
+
+          socket.addEventListener("message", onMessage);
+          socket.addEventListener("close", onClose);
+        });
+      }
+
+      function handleAppMessage(payload) {
+        if (!payload) {
+          return;
+        }
+        logBackendText(payload);
+        const ack = payload.payload?.conn_init_ack;
+        if (payload.type === 2 && ack) {
+          if (ack.success) {
+            clearConnInitRetry();
+            setStatus("#wsStatus", "status.wsInitAck", "ok");
+            setInteractiveEnabled(true);
+          } else if (ack.error_code === "NOT_READY") {
+            setStatus("#wsStatus", "status.wsNotReady", "warn");
+            scheduleConnInitRetry(2000);
+          } else {
+            setStatus("#wsStatus", "status.wsInitFailed", "warn");
+          }
+        }
+        if (payload.type === 6) {
+          setStatus("#wsStatus", "status.wsForceHangup", "warn");
+          setInteractiveEnabled(false);
+        }
+      }
+
+      function logBackendText(payload) {
+        const text =
+          payload?.payload?.text_msg?.content ||
+          payload?.payload?.text?.content ||
+          payload?.payload?.assistant_text?.content ||
+          payload?.text ||
+          payload?.content;
+        if (typeof text === "string" && text.trim()) {
+          log(t("log.backendText"), { type: payload.type, content: text });
+        }
+      }
+
+      function wsReadyError() {
+        if (!state.live?.id) {
+          return t("error.liveNotCreated");
+        }
+        if (!state.appSocket || state.appSocket.readyState !== WebSocket.OPEN) {
+          return t("error.appWsNotReady");
+        }
+        return "";
+      }
+
+      function ensureWsReady(action) {
+        const reason = wsReadyError();
+        if (reason) {
+          throw new Error(t("error.actionFailed", { action, reason }));
+        }
+      }
+
+      function sendAppSignal(payload, label = t("log.sendAppMessage")) {
+        ensureWsReady(label);
+        state.appSocket.send(JSON.stringify(payload));
+        log(label, payload);
+      }
+
+      function buildTextSignal(content) {
+        return {
+          type: 99,
+          live_id: String(state.live.id),
+          conn_id: state.connId,
+          seq_id: state.seqId++,
+          payload: {
+            text_msg: {
+              msg_id: newConnectionId(),
+              content,
+              timestamp: Date.now(),
+            },
+          },
+        };
+      }
+
+      function sendTextMessage() {
+        const input = $("#textInput");
+        const content = input.value.trim();
+        if (!content) {
+          showNotice(t("error.emptyText"));
+          return;
+        }
+        const reason = wsReadyError();
+        if (reason) {
+          showNotice(t("error.sendTextFailed", { reason }));
+          return;
+        }
+        try {
+          clearNotice();
+          sendAppSignal(buildTextSignal(content), t("log.sendTextMessage"));
+          input.value = "";
+          setStatus("#wsStatus", "status.wsTextSent", "ok");
+        } catch (error) {
+          showNotice(error.message || String(error));
+        }
+      }
+
+      async function joinAliRtc() {
+        if (!window.AliRtcEngine) {
+          throw new Error(t("error.sdkNotLoaded"));
+        }
+        const checkResult = await window.AliRtcEngine.isSupported();
+        if (!checkResult.support) {
+          throw new Error(t("error.browserUnsupported", { reason: checkResult.reason || "unknown" }));
+        }
+
+        window.AliRtcEngine.setLogLevel(0);
+        state.aliRtcEngine = window.AliRtcEngine.getInstance();
+        listenAliRtcEvents(state.aliRtcEngine);
+        await callOptionalEngineMethod(state.aliRtcEngine, "setChannelProfile", "communication");
+        await callOptionalEngineMethod(state.aliRtcEngine, "setDefaultPublishLocalAudioStream", true);
+        await callOptionalEngineMethod(state.aliRtcEngine, "setDefaultPublishLocalVideoStream", isVideoMode());
+        await callOptionalEngineMethod(state.aliRtcEngine, "setDefaultSubscribeAllRemoteAudioStreams", true);
+        await callOptionalEngineMethod(state.aliRtcEngine, "setDefaultSubscribeAllRemoteVideoStreams", true);
+
+        // Web SDK 使用 live 返回的 base64 authInfo 字符串入会（与 alirtc/index.html 一致）。
+        const displayName = state.rtc.user_id;
+        setStatus("#rtcStatus", "status.rtcJoining", "warn");
+        log("AliRTC joinChannel", {
+          appId: state.rtc.app_id,
+          channelId: state.rtc.channel_id,
+          userId: state.rtc.user_id,
+          tokenType: "base64",
+          timestamp: Number(state.rtc.token_expire_at),
+        });
+        await state.aliRtcEngine.joinChannel(state.rtc.token, displayName);
+
+        if (isVideoMode()) {
+          try {
+            await callOptionalEngineMethod(state.aliRtcEngine, "setLocalViewConfig", "localPreviewer", 1);
+            await callOptionalEngineMethod(state.aliRtcEngine, "startPreview", 1);
+            await callOptionalEngineMethod(state.aliRtcEngine, "publishLocalVideoStream", true);
+          } catch (error) {
+            showMediaNotice("camera", error);
+            throw error;
+          }
+        }
+        try {
+          await callOptionalEngineMethod(state.aliRtcEngine, "publishLocalAudioStream", true);
+        } catch (error) {
+          showMediaNotice("microphone", error);
+          throw error;
+        }
+
+        setStatus("#rtcStatus", "status.rtcJoined", "ok");
+        log(t("log.rtcJoined"));
+      }
+
+      async function callOptionalEngineMethod(engine, methodName, ...args) {
+        if (typeof engine[methodName] !== "function") {
+          return;
+        }
+        await engine[methodName](...args);
+        log(t("log.rtcMethod", { methodName }), { args });
+      }
+
+      function listenAliRtcEvents(engine) {
+        engine.on("bye", (code) => {
+          setStatus("#rtcStatus", "status.rtcBye", "warn", { code });
+          log("AliRTC bye", { code });
+        });
+        engine.on("remoteUserOnLineNotify", (userId, elapsed) => {
+          log(t("log.remoteUserOnline"), { userId, elapsed });
+        });
+        engine.on("remoteUserOffLineNotify", (userId, reason) => {
+          log(t("log.remoteUserOffline"), { userId, reason });
+          removeRemoteVideo(userId, "camera");
+          removeRemoteVideo(userId, "screen");
+        });
+        engine.on("videoSubscribeStateChanged", (userId, oldState, newState, interval, channelId) => {
+          log(t("log.remoteCameraState"), { userId, oldState, newState, interval, channelId });
+          handleRemoteVideo(userId, "camera", newState, 1);
+        });
+        engine.on("screenShareSubscribeStateChanged", (userId, oldState, newState, interval, channelId) => {
+          log(t("log.remoteScreenState"), { userId, oldState, newState, interval, channelId });
+          handleRemoteVideo(userId, "screen", newState, 2);
+        });
+        engine.on("authInfoWillExpire", () => {
+          log(t("log.authWillExpire"));
+        });
+        engine.on("authInfoExpired", () => {
+          log(t("log.authExpired"));
+        });
+      }
+
+      function handleRemoteVideo(userId, type, newState, streamType) {
+        if (newState === 3) {
+          addRemoteVideo(userId, type, streamType);
+          return;
+        }
+        if (newState === 1) {
+          removeRemoteVideo(userId, type);
+        }
+      }
+
+      function addRemoteVideo(userId, type, streamType) {
+        const key = `${type}_${userId}`;
+        if (state.remoteVideoElMap.has(key)) {
+          return;
+        }
+        const wrapper = document.createElement("div");
+        wrapper.className = "video-box";
+        wrapper.dataset.remoteKey = key;
+
+        const title = document.createElement("div");
+        title.className = "video-title";
+        title.textContent = `${type} - ${userId}`;
+
+        const video = document.createElement("video");
+        video.autoplay = true;
+        video.playsInline = true;
+        video.muted = true;
+        video.controls = true;
+
+        const stage = document.createElement("div");
+        stage.className = "video-stage";
+        stage.appendChild(video);
+
+        wrapper.appendChild(title);
+        wrapper.appendChild(stage);
+        remoteVideoContainer.appendChild(wrapper);
+        state.remoteVideoElMap.set(key, { wrapper, video });
+        state.aliRtcEngine.setRemoteViewConfig(video, userId, streamType);
+        video.play().catch((error) => log(t("log.remoteAutoplayFailed"), errorToJson(error)));
+      }
+
+      function removeRemoteVideo(userId, type) {
+        const key = `${type}_${userId}`;
+        const item = state.remoteVideoElMap.get(key);
+        if (!item) {
+          return;
+        }
+        state.aliRtcEngine?.setRemoteViewConfig(null, userId, type === "camera" ? 1 : 2);
+        item.video.pause();
+        item.wrapper.remove();
+        state.remoteVideoElMap.delete(key);
+      }
+
+      function showMediaNotice(kind, error) {
+        const deviceName = kind === "camera" ? t("device.camera") : t("device.microphone");
+        const message = mediaErrorMessage(deviceName, error);
+        mediaNotice.textContent = message;
+        mediaNotice.classList.add("show");
+        setStatus("#rtcStatus", "status.deviceNotReady", "warn", { device: deviceName });
+        log(message, errorToJson(error));
+      }
+
+      function clearMediaNotice() {
+        mediaNotice.textContent = "";
+        mediaNotice.classList.remove("show");
+      }
+
+      function mediaErrorMessage(deviceName, error) {
+        const text = `${error?.name || ""} ${error?.message || error || ""}`;
+        if (/NotAllowedError|PermissionDenied|denied|permission/i.test(text)) {
+          return t("error.mediaPermission", { device: deviceName });
+        }
+        if (/NotFoundError|DevicesNotFound|not found|no device/i.test(text)) {
+          return t("error.mediaNotFound", { device: deviceName });
+        }
+        if (/NotReadableError|TrackStartError|Could not start|in use|busy/i.test(text)) {
+          return t("error.mediaBusy", { device: deviceName });
+        }
+        return t("error.mediaGeneric", { device: deviceName });
+      }
+
+      async function hangup() {
+        hangupBtn.disabled = true;
+        setInteractiveEnabled(false);
+        if (state.appSocket?.readyState === WebSocket.OPEN && state.live?.id) {
+          try {
+            sendAppSignal({
+              type: 5,
+              live_id: String(state.live.id),
+              conn_id: state.connId,
+              seq_id: state.seqId++,
+              payload: {
+                hangup: {
+                  hangup_reason: "demo_hangup",
+                },
+              },
+            });
+          } catch (error) {
+            log(t("log.hangupSignalFailed"), errorToJson(error));
+          }
+        }
+        await cleanupRtc();
+        closeAppSocket();
+        joinBtn.disabled = false;
+      }
+
+      async function resetSessionState() {
+        clearConnInitRetry();
+        closeAppSocket();
+        await cleanupRtc();
+        state.live = undefined;
+        state.rtc = undefined;
+        state.connId = newConnectionId();
+        state.seqId = 1;
+        sessionData.dataset.emptySession = "true";
+        sessionData.textContent = t("session.empty");
+        clearMediaNotice();
+        setInteractiveEnabled(false);
+        setStatus("#apiStatus", "status.apiIdle", "warn");
+        setStatus("#wsStatus", "status.wsIdle", "warn");
+      }
+
+      function closeAppSocket() {
+        if (!state.appSocket) {
+          return;
+        }
+        if (state.appSocket.readyState === WebSocket.OPEN || state.appSocket.readyState === WebSocket.CONNECTING) {
+          state.appSocket.close();
+        }
+        state.appSocket = undefined;
+      }
+
+      async function cleanupRtc() {
+        for (const key of [...state.remoteVideoElMap.keys()]) {
+          const [type, userId] = key.split("_");
+          removeRemoteVideo(userId, type);
+        }
+        if (!state.aliRtcEngine) {
+          return;
+        }
+        try {
+          await callOptionalEngineMethod(state.aliRtcEngine, "stopPreview");
+          await callOptionalEngineMethod(state.aliRtcEngine, "leaveChannel");
+        } catch (error) {
+          log(t("log.rtcCleanupFailed"), errorToJson(error));
+        } finally {
+          state.aliRtcEngine.destroy();
+          state.aliRtcEngine = undefined;
+          setStatus("#rtcStatus", "status.rtcIdle", "warn");
+        }
+      }
+
+      function safeJson(value) {
+        try {
+          return JSON.parse(value);
+        } catch {
+          return undefined;
+        }
+      }
+
+      function errorToJson(error) {
+        return {
+          name: error?.name,
+          message: error?.message || String(error),
+          stack: error?.stack,
+        };
+      }
+
+      function applyQueryDefaults() {
+        const params = new URLSearchParams(window.location.search);
+        const fieldMap = {
+          env: "environment",
+          api_key: "authToken",
+          authorization: "authToken",
+          character_id: "characterId",
+          call_mode: "callMode",
+          avatar_persona: "avatarPersona",
+          avatar_image_uri: "avatarImageUri",
+          avatar_name: "avatarName",
+          avatar_voice: "avatarVoice",
+          text: "textInput",
+        };
+        for (const [paramName, elementId] of Object.entries(fieldMap)) {
+          if (!params.has(paramName)) {
+            continue;
+          }
+          const el = $(`#${elementId}`);
+          if (!el) {
+            continue;
+          }
+          el.value = params.get(paramName);
+        }
+        if (params.size > 0) {
+          log(t("log.queryPrefilled"), {
+            env: $("#environment").value,
+            call_mode: $("#callMode").value,
+            character_id: $("#characterId").value,
+            api_key: $("#authToken").value ? `${stripAuthPrefix($("#authToken").value).slice(0, 12)}...` : "",
+          });
+        }
+      }
+
+      applyLanguage(detectInitialLanguage());
+      applyQueryDefaults();
+
+      $("#language").addEventListener("change", (event) => {
+        applyLanguage(event.target.value, { persist: true });
+      });
+
+      joinBtn.addEventListener("click", async () => {
+        joinBtn.disabled = true;
+        hangupBtn.disabled = false;
+        try {
+          await resetSessionState();
+          await createLive();
+          connectAppWebSocket();
+          if (isVideoMode()) {
+            log(t("log.videoWaitConnInit"));
+            await waitForConnInitAck();
+          }
+          await joinAliRtc();
+        } catch (error) {
+          log(t("log.startFailed"), errorToJson(error));
+          setStatus("#apiStatus", "status.apiFailed", "warn");
+          setStatus("#rtcStatus", "status.rtcFailed", "warn");
+          hangupBtn.disabled = true;
+          joinBtn.disabled = false;
+          await cleanupRtc();
+          closeAppSocket();
+        }
+      });
+
+      hangupBtn.addEventListener("click", () => {
+        hangup().catch((error) => log(t("log.hangupFailed"), errorToJson(error)));
+      });
+
+      clearBtn.addEventListener("click", () => {
+        eventLog.textContent = "";
+      });
+
+      sendTextBtn.addEventListener("click", sendTextMessage);
+
+      $("#textInput").addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" || event.shiftKey || event.isComposing) {
+          return;
+        }
+        event.preventDefault();
+        if (sendTextBtn.disabled) {
+          showNotice(t("error.sendTextFailed", { reason: wsReadyError() || t("error.sendButtonDisabled") }));
+          return;
+        }
+        sendTextMessage();
+      });
+
+    </script>
+  </body>
+</html>

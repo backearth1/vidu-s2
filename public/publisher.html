@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>推流端</title>
+  <!-- 仅由服务器上的无头 Chrome 加载。摄像头 / 麦克风是 Chrome 的假设备，内容来自服务端转码好的素材文件。 -->
+  <script>
+    // 必须在 SDK 之前包一层：SDK 内部创建的 RTCPeerConnection 拿不到引用，没法读发送端统计
+    (function () {
+      const Orig = window.RTCPeerConnection;
+      window.__pcs = [];
+      window.RTCPeerConnection = function (...a) { const pc = new Orig(...a); window.__pcs.push(pc); return pc; };
+      window.RTCPeerConnection.prototype = Orig.prototype;
+      Object.setPrototypeOf(window.RTCPeerConnection, Orig);
+    })();
+  </script>
+  <script src="https://g.alicdn.com/apsara-media-box/imp-web-rtc/7.1.9/aliyun-rtc-sdk.js"></script>
+</head>
+<body>
+  <video id="preview" muted playsinline autoplay></video>
+  <script>
+    (function () {
+      const logs = [];
+      const state = { joined: false, error: '', publishedAt: 0, send: null };
+      let prev = null;
+      let engine = null;
+      // 与官方 demo 一致：SDK 版本不同，部分 setDefault* 方法并不存在，缺了就跳过
+      const opt = async (name, ...a) => { if (typeof engine[name] === 'function') await engine[name](...a); };
+      const log = (message, extra) => logs.push({ t: Date.now(), message, ...(extra ? { extra } : {}) });
+
+      window.__pub = {
+        async start(rtc) {
+          if (!window.AliRtcEngine) throw new Error('AliRTC SDK 未加载（服务器能否访问 g.alicdn.com？）');
+          const support = await window.AliRtcEngine.isSupported();
+          if (!support.support) throw new Error('AliRTC 不支持：' + (support.reason || JSON.stringify(support.detail || {})));
+
+          window.AliRtcEngine.setLogLevel(0);
+          engine = window.AliRtcEngine.getInstance();
+          engine.on('bye', (code) => { state.joined = false; log('RTC bye code=' + code); });
+          engine.on('authInfoExpired', () => { state.error = 'token 已过期'; log('RTC token 已过期'); });
+
+          await opt('setChannelProfile', 'communication');
+          await opt('setDefaultPublishLocalAudioStream', true);
+          await opt('setDefaultPublishLocalVideoStream', true);
+          // 推流端只发不收：编辑结果由用户的浏览器去订阅，这里订阅了反而白占带宽
+          await opt('setDefaultSubscribeAllRemoteAudioStreams', false);
+          await opt('setDefaultSubscribeAllRemoteVideoStreams', false);
+
+          log('joinChannel', { channel_id: rtc.channel_id, user_id: rtc.user_id });
+          await engine.joinChannel(rtc.token, rtc.user_id);
+          state.joined = true;
+
+          // SDK 默认档位是 360p_1（640x360 / 15fps / 400kbps），会把素材压得很糊。
+          // 按素材方向选 720p 30fps：横屏 1280x720，竖屏 720x1280 时宽高由 SDK 按采集比例适配。
+          if (rtc.skipProfile) log('跳过采集档位设置（沿用 SDK 默认档位）');
+          else try {
+            await engine.setCameraCapturerConfiguration({ width: rtc.width || 1280, height: rtc.height || 720, frameRate: rtc.fps || 30, maxSendFrameRate: rtc.fps || 30, bitrate: rtc.bitrate || 2000 });
+            try {
+              for (const pc of window.__pcs || []) for (const snd of pc.getSenders()) {
+                if (snd.track?.kind !== 'video') continue;
+                const p = snd.getParameters(); p.degradationPreference = 'maintain-framerate';
+                if (p.encodings?.[0]) { p.encodings[0].maxBitrate = (rtc.bitrate || 900) * 1000; p.encodings[0].maxFramerate = rtc.fps || 30; }
+                await snd.setParameters(p);
+              }
+              log('已设置发送策略：拥塞时优先保帧率（maintain-framerate）');
+            } catch (err) { log('设置发送策略失败：' + err.message); }
+            log('已设置采集档位', { w: rtc.width || 1280, h: rtc.height || 720, fps: rtc.fps || 30, kbps: rtc.bitrate || 2000 });
+          } catch (err) { log('设置采集档位失败（沿用默认）：' + err.message); }
+          await engine.setLocalViewConfig(document.getElementById('preview'), 1);
+          await engine.startPreview(1);
+          await engine.publishLocalVideoStream(true);
+          await engine.publishLocalAudioStream(true);
+          state.publishedAt = Date.now();
+          log('已发布视频与音频');
+
+          const v = document.getElementById('preview');
+          return { width: v.videoWidth, height: v.videoHeight };
+        },
+
+        async stop() {
+          try { await engine?.leaveChannel(); } catch (err) { log('leaveChannel 异常：' + err.message); }
+          state.joined = false;
+        },
+
+        status() {
+          const v = document.getElementById('preview');
+          const q = v.getVideoPlaybackQuality ? v.getVideoPlaybackQuality() : null;
+          return {
+            joined: state.joined, error: state.error, publishedAt: state.publishedAt,
+            width: v.videoWidth, height: v.videoHeight,
+            frames: q ? q.totalVideoFrames : 0, dropped: q ? q.droppedVideoFrames : 0,
+            visibility: document.visibilityState, send: state.send,
+          };
+        },
+
+        drain() { return logs.splice(0); },
+
+        /** 逐环节取证：假摄像头原始轨道 / SDK 采集轨道 / 实际送入编码器的轨道 各自的帧率与设置 */
+        async inspect() {
+          const rate = (v, ms = 3000) => new Promise((res) => {
+            let n = 0, t0 = 0, tn = 0;
+            const cb = (now) => { if (!t0) t0 = now; n++; tn = now; if (tn - t0 < ms) v.requestVideoFrameCallback(cb); else res(+((n - 1) / ((tn - t0) / 1000)).toFixed(1)); };
+            v.requestVideoFrameCallback(cb);
+          });
+          const out = { senders: [], preview: null };
+          const pv = document.getElementById('preview');
+          out.preview = { size: `${pv.videoWidth}x${pv.videoHeight}`, fps: await rate(pv) };
+          for (const pc of window.__pcs || []) {
+            for (const snd of pc.getSenders()) {
+              const t = snd.track; if (!t || t.kind !== 'video') continue;
+              const v = document.createElement('video'); v.muted = true; v.playsInline = true;
+              v.srcObject = new MediaStream([t]); document.body.appendChild(v); await v.play().catch(() => {});
+              const params = snd.getParameters();
+              out.senders.push({
+                label: t.label, settings: t.getSettings(), constraints: t.getConstraints(), readyState: t.readyState,
+                trackFps: await rate(v),
+                encodings: (params.encodings || []).map((e) => ({ maxBitrate: e.maxBitrate, maxFramerate: e.maxFramerate, scaleResolutionDownBy: e.scaleResolutionDownBy, active: e.active })),
+                degradationPreference: params.degradationPreference,
+              });
+              v.remove();
+            }
+          }
+          return out;
+        },
+
+        /** 发送端实测：SDK 实际把视频以什么规格发出去了（与我们「设置」的可能不一样）。 */
+        async sampleSend() {
+          const out = [];
+          let pair = null, remote = null;
+          for (const pc of window.__pcs || []) {
+            let report; try { report = await pc.getStats(); } catch { continue; }
+            report.forEach((r) => {
+              if (r.type === 'outbound-rtp' && r.kind === 'video') out.push(r);
+              if (r.type === 'candidate-pair' && (r.nominated || r.state === 'succeeded') && r.availableOutgoingBitrate != null) pair = r;
+              if (r.type === 'remote-inbound-rtp' && r.kind === 'video') remote = r;
+            });
+          }
+          const now = performance.now();
+          if (!out.length) return null;
+          const r = out.sort((a, b) => (b.bytesSent || 0) - (a.bytesSent || 0))[0];
+          let s = null;
+          if (prev && now > prev.t) {
+            const dt = (now - prev.t) / 1000;
+            const dEnc = r.framesEncoded - prev.framesEncoded;
+            s = {
+              encodedFps: +(dEnc / dt).toFixed(1),
+              sentFps: +(((r.framesSent ?? 0) - prev.framesSent) / dt).toFixed(1),
+              captureFps: r.framesPerSecond != null ? +r.framesPerSecond.toFixed(1) : null,
+              kbps: Math.round(((r.bytesSent - prev.bytesSent) * 8) / dt / 1000),
+              encodeMs: dEnc > 0 ? +(((r.totalEncodeTime - prev.totalEncodeTime) / dEnc) * 1000).toFixed(1) : null,
+              size: `${r.frameWidth}x${r.frameHeight}`,
+              limit: r.qualityLimitationReason,
+              limitDurations: r.qualityLimitationDurations ? { cpu: +r.qualityLimitationDurations.cpu.toFixed(1), bandwidth: +r.qualityLimitationDurations.bandwidth.toFixed(1) } : null,
+              encoder: r.encoderImplementation, codecId: r.codecId, nack: r.nackCount, pli: r.pliCount, fir: r.firCount,
+              availKbps: pair ? Math.round(pair.availableOutgoingBitrate / 1000) : null,
+              rttMs: pair?.currentRoundTripTime != null ? Math.round(pair.currentRoundTripTime * 1000) : null,
+              targetKbps: r.targetBitrate ? Math.round(r.targetBitrate / 1000) : null,
+              fractionLost: remote?.fractionLost ?? null, packetsLost: remote?.packetsLost ?? null, jitterMs: remote?.jitter != null ? Math.round(remote.jitter * 1000) : null,
+              keyFrames: r.keyFramesEncoded, retransKbps: Math.round(((r.retransmittedBytesSent - prev.retransmittedBytesSent) * 8) / dt / 1000),
+            };
+          }
+          prev = { t: now, framesEncoded: r.framesEncoded, framesSent: r.framesSent ?? 0, bytesSent: r.bytesSent, totalEncodeTime: r.totalEncodeTime, retransmittedBytesSent: r.retransmittedBytesSent || 0 };
+          if (s) state.send = s;
+          return s;
+        },
+      };
+    })();
+  </script>
+</body>
+</html>
